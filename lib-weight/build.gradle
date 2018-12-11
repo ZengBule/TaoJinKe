@@ -1,13 +1,12 @@
 apply plugin: 'com.android.library'
-
+def cfg = rootProject.ext.android
+def ddf = rootProject.ext.defDependencied
 android {
-    compileSdkVersion 26
-
-
+    compileSdkVersion cfg.sdkVersion
 
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 26
+        minSdkVersion cfg.minSdkVersion
+        targetSdkVersion cfg.targetSdkVersion
         versionCode 1
         versionName "1.0"
 
@@ -32,8 +31,14 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation ddf.appcompat
     testImplementation 'junit:junit:4.12'
+    //noinspection GradleCompatible
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    implementation ddf.recyclerview
+    implementation ddf.fastjson
+    implementation ddf.jodaTime
+
 }
