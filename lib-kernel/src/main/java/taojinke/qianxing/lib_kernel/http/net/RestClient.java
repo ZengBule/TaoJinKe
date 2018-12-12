@@ -48,7 +48,7 @@ public class RestClient {
         this.BODY = body;
 
         this.FILE = file;
-        this.DOWNLOAD_DIR = downloadDir;  ///sdcard/XXXX.ext
+        this.DOWNLOAD_DIR = downloadDir;
         this.EXTENSION = extension;
         this.FILENAME = filename;
     }
@@ -57,7 +57,9 @@ public class RestClient {
         return new RestClientBuilder();
     }
 
-    //开始实现真实的网络操作
+    /**
+     * 开始实现真实的网络操作
+     */
     private void request(HttpMethod method) {
         final RestService service = RestCreator.getRestService();
         Call<String> call = null;

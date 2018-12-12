@@ -4,11 +4,11 @@ def cfg=rootProject.ext.android
 def ddf=rootProject.ext.defDependencied
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion cfg.sdkVersion
 
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 26
+        minSdkVersion cfg.minSdkVersion
+        targetSdkVersion cfg.targetSdkVersion
         versionCode 1
         versionName "1.0"
 
@@ -28,16 +28,18 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    implementation ddf.appcompat
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    compileOnly ddf.appcompat
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-
     implementation ddf.retrofit
     implementation ddf.retrofitConverter
     implementation ddf.adapterRxjava2
