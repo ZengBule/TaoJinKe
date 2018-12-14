@@ -1,16 +1,58 @@
 package taojinke.qianxing.lib_base.base;
 
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
-import com.trello.rxlifecycle2.components.support.RxFragment;
-
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
 import io.reactivex.ObservableTransformer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 
-public class BaseFragment extends RxFragment implements BaseView {
+public abstract class BaseFragment extends Fragment implements BaseView {
+
+    private Unbinder mUnbinder;
+    private BaseActivity mContext;
+
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        this.mContext = (BaseActivity) context;
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View inflated = inflater.inflate(getLayoutResources(), container, false);
+        mUnbinder = ButterKnife.bind(this, inflated);
+        return inflated;
+    }
+
+
+    protected abstract int getLayoutResources();
+
+    protected abstract void trySetupData(Bundle savedInstanceState);
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        trySetupData(savedInstanceState);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mUnbinder.unbind();
+        mUnbinder = null;
+    }
+
     @Override
     public void showToast(String message) {
 
@@ -23,12 +65,12 @@ public class BaseFragment extends RxFragment implements BaseView {
 
     @Override
     public Context fetchContext() {
-        return null;
+        return mContext;
     }
 
     @Override
     public Intent fetchIntent() {
-        return null;
+        return mContext.getIntent();
     }
 
     @Override
@@ -48,7 +90,7 @@ public class BaseFragment extends RxFragment implements BaseView {
 
     @Override
     public <T> ObservableTransformer<T, T> bindLifecycle() {
-        return bindToLifecycle();
+        return null;
     }
 
     @Override

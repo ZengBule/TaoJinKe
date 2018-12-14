@@ -1,12 +1,17 @@
 package qianxing.taojinke;
 
 
-import taojinke.qianxing.lib_base.base.BaseActivity;
+import android.app.Activity;
+import android.os.Bundle;
+
+import qianxing.taojinke.base.DaggerActivity;
+import qianxing.taojinke.dagger.activity.ActivityComponent;
+
 
 /**
  * @author Administrator
  */
-public class MainActivity extends BaseActivity {
+public class MainActivity extends DaggerActivity {
 
     // Used to load the 'native-lib' library on application startup.
     static {
@@ -14,10 +19,14 @@ public class MainActivity extends BaseActivity {
     }
 
 
+    @Override
+    protected void trySetupData(Bundle savedInstanceState) {
+
+    }
 
     @Override
-    public int getContentViewLayoutId() {
-        return R.layout.activity_main;
+    protected int getLayoutResources() {
+        return 0;
     }
 
     /**
@@ -25,4 +34,9 @@ public class MainActivity extends BaseActivity {
      * which is packaged with this application.
      */
     public native String stringFromJNI();
+
+    @Override
+    protected void inject(ActivityComponent activityComponent) {
+
+    }
 }
