@@ -8,7 +8,7 @@ import taojinke.qianxing.lib_base.dagger.ModuleSingleton;
 
 @ModuleSingleton
 @Component(modules = ApplicationLikeModule.class, dependencies = GlobalComponent.class)
-public interface ApplicationComponent extends ApplicationComponentInjects {
+public interface ApplicationComponent extends ApplicationComponentExpoes, ApplicationComponentInjects {
     final class Initializer {
         public Initializer() {
         }

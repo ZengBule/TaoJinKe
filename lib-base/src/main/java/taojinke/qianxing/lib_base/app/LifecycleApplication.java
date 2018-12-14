@@ -46,6 +46,13 @@ public class LifecycleApplication extends Application {
 
         registerCallbacks(getActivityLifecycleCallbacks());
         loadProjectApplicationLike();
+
+        if (!Check.isEmpty(lifecycleMap)) {
+            for (String name : lifecycleMap.keySet()) {
+                lifecycleMap.get(name)
+                        .onCreate(this, globalComponent);
+            }
+        }
     }
 
     private void registerCallbacks(ActivityLifecycleCallbacks activityLifecycleCallbacks) {

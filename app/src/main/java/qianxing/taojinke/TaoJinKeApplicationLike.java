@@ -27,8 +27,8 @@ public class TaoJinKeApplicationLike implements ApplicationLike {
 
     @Override
     public void onCreate(LifecycleApplication application, GlobalComponent component) {
-        this.lifecycleApplication = lifecycleApplication;
-        this.globalComponent = globalComponent;
+        this.lifecycleApplication = application;
+        this.globalComponent = component;
     }
 
     public ApplicationComponent getApplicationComponent() {
@@ -66,6 +66,6 @@ public class TaoJinKeApplicationLike implements ApplicationLike {
 
     @Override
     public GlobalComponent getGlobalComponent() {
-        return getGlobalComponent();
+        return globalComponent;
     }
 }
