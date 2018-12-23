@@ -1,5 +1,6 @@
-apply plugin: 'com.android.application'
+import java.text.SimpleDateFormat
 
+apply plugin: 'com.android.application'
 def cfg = rootProject.ext.android
 def ddf = rootProject.ext.defDependencied
 android {
@@ -48,10 +49,69 @@ dependencies {
     annotationProcessor ddf.daggerCompiler
     api ddf.arouterApi
     implementation 'com.android.support:support-v4:28.0.0'
-
+    //implementation 'net.sf.json-lib:json-lib:2.4:jdk15'
     implementation ddf.butterknife
     annotationProcessor ddf.butterknifeCompiler
 
     implementation ddf.rxJava
     implementation ddf.rxAndroid
+    compile project(path: ':lib-kernel')
+}
+
+afterEvaluate {
+    tasks.matching {
+        // 打包操作的时候
+        (it.name.startsWith('assemble'))
+    }.each { task ->
+        //获取任务构建类型
+        def taskBuildType = task.name.substring(8).toLowerCase()
+        //打印
+        println(taskBuildType)
+
+        //如果任务构建类型为release
+        if (taskBuildType.contains('release')) {
+            task.dependsOn(setReleaseVersionCode, generateReleaseLibraryAssets)
+        } else {
+            //默认为debug
+            task.dependsOn(generateDebugModuleJson)
+        }
+    }
+}
+
+task setReleaseVersionCode() {
+    doFirst {
+        SimpleDateFormat format = new SimpleDateFormat("yyMMdd")
+        String dt = format.format(new Date())
+        android.defaultConfig.versionCode = Integer.valueOf(dt + "101")
+    }
+}
+task generateReleaseLibraryAssets(){
+
+    doFirst{
+        generateLibraryJson('release')
+    }
+}
+
+/**
+ * 创建debug版本的library.json
+ * 输出路径 src/debug/assets/library.json
+ */
+task generateDebugModuleJson() {
+    doFirst {
+        generateModuleJson('debug')
+    }
+}
+
+class Book{
+    String name;
+    String path;
+}
+
+def generateLibraryJson(String buildType){
+
+    def applicationPath=["/train/application/like","/chat/application/like","/mine/application/like"]
+    file("src/$buildType/assets/library.json")
+            .withWriter('UTF-8') { within ->
+        within.write(object.toString())
+    }
 }
