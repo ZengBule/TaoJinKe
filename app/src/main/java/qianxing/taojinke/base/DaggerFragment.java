@@ -16,6 +16,7 @@ public abstract class DaggerFragment extends BaseFragment {
 
     private FragmentComponent fragmentComponent;
 
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         inject(getFragmentComponent());
@@ -25,7 +26,7 @@ public abstract class DaggerFragment extends BaseFragment {
     public FragmentComponent getFragmentComponent() {
         if (fragmentComponent == null) {
             fragmentComponent = ComponentFactory.createFragmentComponent(this,
-                    ((LifecycleApplication) getActivity().getApplication())
+                    ((LifecycleApplication) getmContext().getApplication())
                             .fetchApplicationLike(TaoJinKeApplicationLike.class));
         }
 
@@ -34,7 +35,7 @@ public abstract class DaggerFragment extends BaseFragment {
 
 
     private DaggerActivity getDaggerActivity() {
-        return ((DaggerActivity) getActivity());
+        return ((DaggerActivity) getmContext());
     }
 
     protected abstract void inject(FragmentComponent fragmentComponent);

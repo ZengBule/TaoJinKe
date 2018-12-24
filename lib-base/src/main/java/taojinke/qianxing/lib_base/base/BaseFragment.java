@@ -21,6 +21,9 @@ public abstract class BaseFragment extends Fragment implements BaseView {
     private Unbinder mUnbinder;
     private BaseActivity mContext;
 
+    public BaseActivity getmContext() {
+        return mContext;
+    }
 
     @Override
     public void onAttach(Context context) {
@@ -52,6 +55,7 @@ public abstract class BaseFragment extends Fragment implements BaseView {
         mUnbinder.unbind();
         mUnbinder = null;
     }
+
 
     @Override
     public void showToast(String message) {

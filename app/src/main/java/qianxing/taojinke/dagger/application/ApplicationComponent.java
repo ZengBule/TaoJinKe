@@ -11,6 +11,7 @@ import taojinke.qianxing.lib_base.dagger.ModuleSingleton;
 public interface ApplicationComponent extends ApplicationComponentExpoes, ApplicationComponentInjects {
     final class Initializer {
         public Initializer() {
+
         }
 
         static public ApplicationComponent init(final TaoJinKeApplicationLike applicationLike) {

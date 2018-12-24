@@ -2,6 +2,7 @@ package qianxing.taojinke.dagger.activity.module;
 
 import android.app.Activity;
 import android.content.Context;
+import android.support.v4.app.FragmentManager;
 
 import dagger.Module;
 import dagger.Provides;
@@ -29,6 +30,13 @@ public class ActivityModule {
         return daggerActivity;
     }
 
+    @Provides
+    @ActivityScope
+    FragmentManager provideFragmentManager() {
+        return daggerActivity.getSupportFragmentManager();
+    }
+
+
     private DaggerActivity getDaggerActivity() {
         return daggerActivity;
     }
@@ -44,5 +52,14 @@ public class ActivityModule {
     @ActivityScope
     qianxing.taojinke.ui.main.MainContract.IMainView providerMainView() {
         return (qianxing.taojinke.ui.main.MainContract.IMainView) getDaggerActivity();
+    }
+
+    public interface Exposes {
+
+        Activity activity();
+
+        Context context();
+
+        FragmentManager fragmentManager();
     }
 }

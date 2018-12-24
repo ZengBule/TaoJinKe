@@ -70,4 +70,9 @@ public class TaoJinKeApplicationLike implements ApplicationLike {
     public GlobalComponent getGlobalComponent() {
         return globalComponent;
     }
+
+    @Override
+    public void init(Context context) {
+
+    }
 }

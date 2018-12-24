@@ -5,11 +5,12 @@ import qianxing.taojinke.base.DaggerActivity;
 import qianxing.taojinke.dagger.activity.module.ActivityModule;
 import qianxing.taojinke.dagger.activity.module.ActivityPresenterModule;
 import qianxing.taojinke.dagger.application.ApplicationComponent;
+import qianxing.taojinke.dagger.application.ApplicationComponentExpoes;
 import taojinke.qianxing.lib_base.dagger.ActivityScope;
 
 @ActivityScope
 @Component(dependencies = ApplicationComponent.class, modules = {ActivityModule.class, ActivityPresenterModule.class})
-public interface ActivityComponent extends ActivityComponentInjects {
+public interface ActivityComponent extends ActivityComponentInjects, ActivityModule.Exposes {
 
     final class Initalizer {
         static public ActivityComponent init(final DaggerActivity daggerActivity, final ApplicationComponent applicationComponent) {
