@@ -1,5 +1,5 @@
 ext {
-    boolean isModule = false
+    isModule = true
     android = [
             sdkVersion       : 28,
             buildToolsVersion: '28.0.3',

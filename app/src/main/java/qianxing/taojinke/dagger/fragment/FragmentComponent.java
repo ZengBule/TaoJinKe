@@ -26,7 +26,7 @@ import taojinke.qianxing.lib_base.dagger.FragmentScope;
                 FragmentPresenterModule.class
         }
 )
-public interface FragmentComponent extends FragmentComponentInjects{
+public interface FragmentComponent extends FragmentComponentInjects {
 
     final class Initializer {
         static public FragmentComponent init(final DaggerFragment fragment, final ApplicationComponent applicationComponent) {

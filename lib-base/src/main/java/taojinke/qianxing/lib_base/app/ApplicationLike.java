@@ -23,6 +23,5 @@ public interface ApplicationLike extends IProvider {
 
     GlobalComponent getGlobalComponent();
 
-    default void init(Context context) {
-    }
+
 }
