@@ -2,6 +2,8 @@ package qianxing.taojinke;
 
 import android.content.Context;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
+
 import qianxing.taojinke.dagger.ComponentFactory;
 import qianxing.taojinke.dagger.application.ApplicationComponent;
 import taojinke.qianxing.lib_base.app.ApplicationLike;
