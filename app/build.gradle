@@ -19,7 +19,7 @@ android {
 
         javaCompileOptions {
             annotationProcessorOptions {
-                arguments = [ moduleName : project.getName() ]
+                arguments = [moduleName: project.getName()]
             }
         }
 
@@ -63,3 +63,4 @@ dependencies {
     implementation ddf.rxJava
     implementation ddf.rxAndroid
 }
+
