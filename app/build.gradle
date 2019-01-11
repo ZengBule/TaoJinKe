@@ -45,6 +45,8 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleCompatible
+    implementation 'com.android.support:design:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     compileOnly ddf.appcompat
     testImplementation 'junit:junit:4.12'
@@ -106,7 +108,7 @@ task generateReleaseLibraryAssets(){
  */
 task generateDebugModuleJson() {
     doFirst {
-        generateModuleJson('debug')
+        generateLibraryJson('debug')
     }
 }
 

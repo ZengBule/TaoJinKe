@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/item_bottom_1"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:icon="@mipmap/set"
+        android:title="选项一" />
+    <item
+        android:id="@+id/item_bottom_2"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:icon="@mipmap/set"
+        android:title="选项二" />
+    <item
+        android:id="@+id/item_bottom_3"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:icon="@mipmap/set"
+        android:title="选项三" />
+
+</menu>
