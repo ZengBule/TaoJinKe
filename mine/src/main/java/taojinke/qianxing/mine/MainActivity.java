@@ -3,7 +3,6 @@ package taojinke.qianxing.mine;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import taojinke.qianxing.chat.R;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -1,11 +1,10 @@
 package taojinke.qianxing.lib_kernel.http.net.rx;
 
 
-import android.database.Observable;
-
 import java.io.File;
 import java.util.HashMap;
 
+import io.reactivex.Observable;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
@@ -14,7 +13,7 @@ import taojinke.qianxing.lib_kernel.http.net.RestCreator;
 
 public class RxRestClient {
 
-    private final HashMap<String,Object> PARAMS;
+    private final HashMap<String, Object> PARAMS;
     private final String URL;
     private final RequestBody body;
     private final File FILE;
@@ -41,6 +40,12 @@ public class RxRestClient {
                 break;
             case POST:
                 observable = service.post(URL, PARAMS);
+                break;
+            case POST_QUERY:
+                observable = service.postQueryMap(URL, PARAMS);
+                break;
+            case POST_RAW:
+                observable = service.postRaw(URL, body);
                 break;
             case PUT:
                 observable = service.put(URL, PARAMS);
@@ -69,6 +74,14 @@ public class RxRestClient {
         return request(HttpMethod.POST);
     }
 
+    public final Observable<String> postQuery() {
+        return request(HttpMethod.POST_QUERY);
+    }
+
+    public final Observable<String> postRaw() {
+        return request(HttpMethod.POST_RAW);
+    }
+
     public final Observable<String> put() {
         return request(HttpMethod.PUT);
     }
@@ -82,7 +95,7 @@ public class RxRestClient {
     }
 
     public final Observable<ResponseBody> download() {
-        return RestCreator.getRxRestService().download(URL,PARAMS);
+        return RestCreator.getRxRestService().download(URL, PARAMS);
     }
 
 }

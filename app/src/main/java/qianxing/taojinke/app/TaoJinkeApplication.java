@@ -3,10 +3,11 @@ package qianxing.taojinke.app;
 
 import android.content.Context;
 
-import qianxing.taojinke.BuildConfig;
 import qianxing.taojinke.TaoJinKeApplicationLike;
+import qianxing.taojinke.util.BaseUrlManger;
 import taojinke.qianxing.lib_base.app.ApplicationLike;
 import taojinke.qianxing.lib_base.app.LifecycleApplication;
+import taojinke.qianxing.lib_kernel.http.app.Configurator;
 
 /**
  * 主工程 唯一application 所有的模块的application 在此中统一初始化
@@ -26,7 +27,7 @@ public class TaoJinkeApplication extends LifecycleApplication {
     public void onCreate() {
         super.onCreate();
         mContext = this;
-
+        Configurator.getInstance().withApiHost(BaseUrlManger.setBaseUrl(this)).configure();
     }
 
     @Override

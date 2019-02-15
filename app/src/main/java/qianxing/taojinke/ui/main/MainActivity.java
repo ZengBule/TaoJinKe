@@ -13,8 +13,6 @@ import qianxing.taojinke.dagger.activity.ActivityComponent;
 public class MainActivity extends DaggerActivity implements MainContract.IMainView {
     @Inject
     MainContract.IMainPresenter mPresenter;
-    @butterknife.BindView(R.id.sample_text)
-    TextView sampleText;
 
     static {
         System.loadLibrary("native-lib");
@@ -27,7 +25,6 @@ public class MainActivity extends DaggerActivity implements MainContract.IMainVi
 
     @Override
     protected void trySetupData(Bundle savedInstanceState) {
-        sampleText.setText(stringFromJNI());
     }
 
     public native String stringFromJNI();

@@ -1,10 +1,9 @@
 package taojinke.qianxing.lib_kernel.http.net.rx;
 
 
-import android.database.Observable;
-
 import java.util.Map;
 
+import io.reactivex.Observable;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
@@ -29,6 +28,10 @@ public interface RxRestService {
     @FormUrlEncoded
     @POST
     Observable<String> post(@Url String url, @FieldMap Map<String, Object> params);
+
+    @POST
+    Observable<String> postQueryMap(@Url String url, @QueryMap Map<String, Object> params);
+
 
     @FormUrlEncoded
     @PUT

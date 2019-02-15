@@ -41,7 +41,10 @@ ext {
             'objectbox'          : "io.objectbox:objectbox-android:1.2.0",
 
             'gifdrawable'        : "pl.droidsonroids.gif:android-gif-drawable:1.2.8",
-            'jodaTime'           : "joda-time:joda-time:2.9.4"
+            'jodaTime'           : "joda-time:joda-time:2.9.4",
+            'andPermission'      : "com.yanzhenjie:permission:2.0.0-rc4",
+            'log'                : "com.orhanobut:logger:2.2.0"
+
 
     ]
 }

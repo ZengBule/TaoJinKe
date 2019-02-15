@@ -58,12 +58,12 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
 
     @Override
     public Context fetchContext() {
-        return null;
+        return this;
     }
 
     @Override
     public Intent fetchIntent() {
-        return null;
+        return getIntent();
     }
 
     @Override

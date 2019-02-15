@@ -19,18 +19,27 @@ public class ActivityPresenterModule {
     }
 
 
+
     @Provides
     @ActivityScope
-    qianxing.taojinke.ui.HomeContract.IHomePresenter providerHomePresenter() {
-        qianxing.taojinke.ui.HomePresenter presenter = new qianxing.taojinke.ui.HomePresenter();
+    qianxing.taojinke.ui.main.MainContract.IMainPresenter providerMainPresenter() {
+        qianxing.taojinke.ui.main.MainPresenter presenter = new qianxing.taojinke.ui.main.MainPresenter();
         getActivityComponent().inject(presenter);
         return presenter;
     }
 
     @Provides
     @ActivityScope
-    qianxing.taojinke.ui.main.MainContract.IMainPresenter providerMainPresenter() {
-        qianxing.taojinke.ui.main.MainPresenter presenter = new qianxing.taojinke.ui.main.MainPresenter();
+    qianxing.taojinke.ui.launcher.LauncherContract.ILauncherPresenter providerLauncherPresenter() {
+        qianxing.taojinke.ui.launcher.LauncherPresenter presenter = new qianxing.taojinke.ui.launcher.LauncherPresenter();
+        getActivityComponent().inject(presenter);
+        return presenter;
+    }
+
+    @Provides
+    @ActivityScope
+    qianxing.taojinke.ui.login.LoginContract.ILoginPresenter providerLoginPresenter() {
+        qianxing.taojinke.ui.login.LoginPresenter presenter = new qianxing.taojinke.ui.login.LoginPresenter();
         getActivityComponent().inject(presenter);
         return presenter;
     }

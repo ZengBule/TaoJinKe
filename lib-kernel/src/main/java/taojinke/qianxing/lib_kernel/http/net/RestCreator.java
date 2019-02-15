@@ -19,6 +19,7 @@ public class RestCreator {
                 .baseUrl(BASE_URL)
                 .addConverterFactory(ScalarsConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+
                 .client(OkHttpHolder.OK_HTTP_CLIENT)
                 .build();
     }
@@ -26,6 +27,7 @@ public class RestCreator {
     private static final class OkHttpHolder {
         private static final int TIME_OUT = 60;
         private static final OkHttpClient OK_HTTP_CLIENT = new OkHttpClient.Builder()
+                .addInterceptor(new AddCookiesInterceptor())
                 .connectTimeout(TIME_OUT, TimeUnit.SECONDS)
                 .build();
     }

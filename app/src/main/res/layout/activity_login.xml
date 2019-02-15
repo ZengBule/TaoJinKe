@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_login_test"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:alpha="0.8"
+        android:scaleType="fitXY"
+        android:src="@mipmap/bg_login_new" />
+
+    <ImageView
+        android:id="@+id/iv_login_setting"
+        android:layout_width="@dimen/x_ui_px_250.0"
+        android:layout_height="@dimen/x_ui_px_250.0"
+        android:src="@mipmap/logo_login_new"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <LinearLayout
+        android:id="@+id/ll_login_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x_ui_px_60.0"
+        android:layout_marginRight="@dimen/x_ui_px_60.0"
+        android:background="@drawable/border_circle_white_40px"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/x_ui_px_20.0"
+        android:paddingBottom="@dimen/x_ui_px_20.0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <ImageView
+            android:layout_width="@dimen/x_ui_px_36.0"
+            android:layout_height="@dimen/x_ui_px_50.0"
+            android:layout_marginLeft="@dimen/x_ui_px_60.0"
+            android:layout_marginRight="@dimen/x_ui_px_60.0"
+            android:src="@mipmap/icon_login_user_white" />
+
+        <View
+            android:layout_width="0.5px"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:paddingTop="@dimen/x_ui_px_10.0"
+            android:paddingBottom="@dimen/x_ui_px_10.0" />
+
+        <taojinke.qianxing.lib_weight.ContentWithSpaceEditText
+            android:id="@+id/ed_login_account"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x_ui_px_30.0"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请输入账号"
+            android:inputType="phone"
+            android:textColor="@color/white"
+            android:textColorHint="#FFBEBEBE"
+            android:textSize="@dimen/font_ui_px_36.0" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_login_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x_ui_px_60.0"
+        android:layout_marginTop="@dimen/x_ui_px_30.0"
+        android:layout_marginRight="@dimen/x_ui_px_60.0"
+        android:background="@drawable/border_circle_white_40px"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/x_ui_px_20.0"
+        android:paddingBottom="@dimen/x_ui_px_20.0"
+        app:layout_constraintTop_toBottomOf="@+id/ll_login_account">
+
+        <ImageView
+            android:layout_width="@dimen/x_ui_px_36.0"
+            android:layout_height="@dimen/x_ui_px_50.0"
+            android:layout_marginLeft="@dimen/x_ui_px_60.0"
+            android:layout_marginRight="@dimen/x_ui_px_60.0"
+            android:src="@mipmap/icon_login_lock_white" />
+
+        <View
+            android:layout_width="0.5px"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:paddingTop="@dimen/x_ui_px_10.0"
+            android:paddingBottom="@dimen/x_ui_px_10.0" />
+
+        <EditText
+            android:id="@+id/ed_login_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x_ui_px_30.0"
+            android:layout_marginLeft="@dimen/x_ui_px_30.0"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            android:textColorHint="#FFBEBEBE"
+            android:textSize="@dimen/font_ui_px_36.0" />
+
+        <ImageView
+            android:id="@+id/iv_login_delete"
+            android:layout_width="@dimen/x_ui_px_30.0"
+            android:layout_height="@dimen/x_ui_px_30.0"
+            android:layout_marginStart="@dimen/x_ui_px_30.0"
+            android:layout_marginLeft="@dimen/x_ui_px_30.0"
+            android:layout_marginEnd="@dimen/x_ui_px_20.0"
+            android:layout_marginRight="@dimen/x_ui_px_20.0"
+            android:src="@mipmap/icon_delete_white" />
+
+        <ImageView
+            android:id="@+id/iv_login_show"
+            android:layout_width="@dimen/x_ui_px_40.0"
+            android:layout_height="@dimen/x_ui_px_30.0"
+            android:layout_marginEnd="@dimen/x_ui_px_30.0"
+            android:layout_marginRight="@dimen/x_ui_px_30.0"
+            android:src="@mipmap/icon_login_un_show_password" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_login_forget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/x_ui_px_30.0"
+        android:paddingTop="@dimen/x_ui_px_10.0"
+        android:paddingRight="@dimen/x_ui_px_30.0"
+        android:paddingBottom="@dimen/x_ui_px_10.0"
+        android:text="忘记密码?"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_ui_px_28.0"
+        app:layout_constraintRight_toRightOf="@+id/ll_login_password"
+        app:layout_constraintTop_toBottomOf="@+id/ll_login_password" />
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x_ui_px_60.0"
+        android:layout_marginTop="@dimen/x_ui_px_90.0"
+        android:layout_marginRight="@dimen/x_ui_px_60.0"
+        android:background="@drawable/bg_btn_white"
+        android:gravity="center"
+        android:paddingTop="@dimen/x_ui_px_20.0"
+        android:paddingBottom="@dimen/x_ui_px_20.0"
+        android:text="登录"
+        android:textColor="#FF7272EB"
+        android:textSize="@dimen/font_ui_px_36.0"
+        app:layout_constraintTop_toBottomOf="@+id/ll_login_password" />
+
+    <LinearLayout
+        android:id="@+id/ll_login_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x_ui_px_60.0"
+        android:layout_marginTop="@dimen/x_ui_px_30.0"
+        android:layout_marginRight="@dimen/x_ui_px_60.0"
+        android:background="@drawable/border_circle_white_40px"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/x_ui_px_20.0"
+        android:paddingBottom="@dimen/x_ui_px_20.0"
+        app:layout_constraintTop_toBottomOf="@+id/tv_login">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="没有账号？去注册"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_ui_px_32.0" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

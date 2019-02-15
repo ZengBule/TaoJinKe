@@ -46,4 +46,7 @@ dependencies {
     implementation ddf.okHttp3
     implementation ddf.rxJava
     implementation ddf.rxAndroid
+    implementation ddf.log
+    implementation ddf.fastjson
+    implementation project(path: ':lib-core')
 }

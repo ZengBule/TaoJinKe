@@ -42,16 +42,23 @@ public class ActivityModule {
     }
 
 
-    @Provides
-    @ActivityScope
-    qianxing.taojinke.ui.HomeContract.IHomeView providerHomeView() {
-        return (qianxing.taojinke.ui.HomeContract.IHomeView) getDaggerActivity();
-    }
 
     @Provides
     @ActivityScope
     qianxing.taojinke.ui.main.MainContract.IMainView providerMainView() {
         return (qianxing.taojinke.ui.main.MainContract.IMainView) getDaggerActivity();
+    }
+
+    @Provides
+    @ActivityScope
+    qianxing.taojinke.ui.launcher.LauncherContract.ILauncherView providerLauncherView() {
+        return (qianxing.taojinke.ui.launcher.LauncherContract.ILauncherView) getDaggerActivity();
+    }
+
+    @Provides
+    @ActivityScope
+    qianxing.taojinke.ui.login.LoginContract.ILoginView providerLoginView() {
+        return (qianxing.taojinke.ui.login.LoginContract.ILoginView) getDaggerActivity();
     }
 
     public interface Exposes {

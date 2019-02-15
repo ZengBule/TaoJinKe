@@ -9,8 +9,8 @@ android {
         applicationId "qianxing.taojinke"
         minSdkVersion cfg.minSdkVersion
         targetSdkVersion cfg.targetSdkVersion
-        versionCode 20181214
-        versionName "5.1.2"
+        versionCode 20191214
+        versionName "6.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
             cmake {
@@ -55,6 +55,7 @@ dependencies {
     implementation project(path: ':lib-base')
     implementation project(path: ':lib-kernel')
     implementation project(path: ':lib-weight')
+    implementation project(path: ':lib-core')
     implementation ddf.dagger
     annotationProcessor ddf.daggerCompiler
     api ddf.arouterApi
@@ -62,10 +63,14 @@ dependencies {
     //implementation 'net.sf.json-lib:json-lib:2.4:jdk15'
     implementation ddf.butterknife
     annotationProcessor ddf.butterknifeCompiler
-
     implementation ddf.rxJava
     implementation ddf.rxAndroid
-    compile project(path: ':lib-kernel')
+    compileOnly ddf.andPermission
+    compileOnly ddf.fastjson
+
+    implementation ddf.log
+
+
 }
 
 afterEvaluate {
@@ -120,9 +125,9 @@ class Book{
 def generateLibraryJson(String buildType){
 
     def applicationPath=["/train/application/like","/chat/application/like","/mine/application/like"]
-    file("src/$buildType/assets/library.json")
-            .withWriter('UTF-8') { within ->
-        within.write(object.toString())
-    }
+//    file("src/$buildType/assets/library.json")
+//            .withWriter('UTF-8') { within ->
+//        within.write(object.toString())
+//    }
 }
 
