@@ -1,5 +1,6 @@
 package taojinke.qianxing.lib_base.base;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,7 +13,7 @@ import cn.nekocode.rxlifecycle.RxLifecycle;
 import io.reactivex.ObservableTransformer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
-import taojinke.qianxing.lib_base.R;
+import taojinke.qianxing.lib_weight.DialogUtils;
 
 
 /**
@@ -66,14 +67,21 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
         return getIntent();
     }
 
+    Dialog mDialog;
+
     @Override
     public void showLoading() {
-
+        mDialog = DialogUtils.createLoadingDialog(this, null);
+        if (mDialog != null) {
+            mDialog.show();
+        }
     }
 
     @Override
     public void dismissLoading() {
-
+        if (mDialog != null) {
+            mDialog.cancel();
+        }
     }
 
     @Override

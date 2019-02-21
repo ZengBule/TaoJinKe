@@ -43,4 +43,28 @@ public class ActivityPresenterModule {
         getActivityComponent().inject(presenter);
         return presenter;
     }
+
+    @Provides
+    @ActivityScope
+    qianxing.taojinke.ui.user.forgetpassword.ForgetPasswordContract.IForgetPasswordPresenter providerForgetPasswordPresenter() {
+        qianxing.taojinke.ui.user.forgetpassword.ForgetPasswordPresenter presenter = new qianxing.taojinke.ui.user.forgetpassword.ForgetPasswordPresenter();
+        getActivityComponent().inject(presenter);
+        return presenter;
+    }
+
+    @Provides
+    @ActivityScope
+    qianxing.taojinke.ui.user.verifycode.VerifyCodeContract.IVerifyCodePresenter providerVerifyCodePresenter() {
+        qianxing.taojinke.ui.user.verifycode.VerifyCodePresenter presenter = new qianxing.taojinke.ui.user.verifycode.VerifyCodePresenter();
+        getActivityComponent().inject(presenter);
+        return presenter;
+    }
+
+    @Provides
+    @ActivityScope
+    qianxing.taojinke.ui.user.register.RegisterUserContract.IRegisterUserPresenter providerRegisterUserPresenter() {
+        qianxing.taojinke.ui.user.register.RegisterUserPresenter presenter = new qianxing.taojinke.ui.user.register.RegisterUserPresenter();
+        getActivityComponent().inject(presenter);
+        return presenter;
+    }
 }

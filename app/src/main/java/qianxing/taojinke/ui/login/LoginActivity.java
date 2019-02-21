@@ -22,7 +22,11 @@ import butterknife.OnClick;
 import qianxing.taojinke.R;
 import qianxing.taojinke.base.DaggerActivity;
 import qianxing.taojinke.dagger.activity.ActivityComponent;
+import qianxing.taojinke.ui.main.MainActivity;
 import qianxing.taojinke.ui.test.TestSettingActivity;
+import qianxing.taojinke.ui.user.register.RegisterUserActivity;
+import taojinke.qianxing.core.statusbar.StatusBarUtils;
+import taojinke.qianxing.lib_kernel.model.LoginUserBean;
 import taojinke.qianxing.lib_kernel.sharedpreference.SharedPreferenceUtils;
 import taojinke.qianxing.lib_weight.ContentWithSpaceEditText;
 
@@ -73,6 +77,7 @@ public class LoginActivity extends DaggerActivity implements LoginContract.ILogi
 
     @Override
     protected void trySetupData(Bundle savedInstanceState) {
+        StatusBarUtils.with(this).init().setStatusTextColorWhite(true, this);
         initEvent();
     }
 
@@ -157,8 +162,8 @@ public class LoginActivity extends DaggerActivity implements LoginContract.ILogi
      * 注册账号
      */
     private void registerAccount() {
-//        Intent intent = new Intent(LoginActivity.this, PhoneNumberActivity.class);
-//        startActivity(intent);
+        Intent intent = new Intent(LoginActivity.this, RegisterUserActivity.class);
+        startActivity(intent);
     }
 
     /**
@@ -179,21 +184,34 @@ public class LoginActivity extends DaggerActivity implements LoginContract.ILogi
         mPresenter.loginTjk(user.replaceAll(" ", ""), password);
     }
 
-//    /**
-//     * 保存用户数据
-//     */
-//    private void saveUserInfo(LoginUserBean loginUserBean) {
-//        LoginUserBean.UserBean userBean = loginUserBean.getUser();
-//        SharedPreferenceUtils.savePreference(this, "Token", "token", loginUserBean.getToken());
-//        SharedPreferenceUtils.saveUserIDPerference(this, userBean.getId() + "");
-//        SharedPreferenceUtils.saveUserNamePreference(this, userBean.getNick());
-//        SharedPreferenceUtils.saveHeadPreference(this, userBean.getHead());
-//        SharedPreferenceUtils.savePhonePreference(this, userBean.getLogin_phone());
-//        SharedPreferenceUtils.savepaymentAccountIdPerference(this, userBean.getPaymentAccountId());
-//        SharedPreferenceUtils.saveRealNamePreference(this, userBean.getReal_name());
-//        SharedPreferenceUtils.saveLoginNamePreference(this, userBean.getLogin_name());
-//        SharedPreferenceUtils.saveUserSex(this, userBean.getSex());
-//    }
+    /**
+     * 保存用户数据
+     */
+    @Override
+    public void saveUserInfo(LoginUserBean loginUserBean) {
+        LoginUserBean.UserBean userBean = loginUserBean.getUser();
+        SharedPreferenceUtils.savePreference(this, "Token", "token", loginUserBean.getToken());
+        SharedPreferenceUtils.saveUserIDPerference(this, userBean.getId() + "");
+        SharedPreferenceUtils.saveUserNamePreference(this, userBean.getNick());
+        SharedPreferenceUtils.saveHeadPreference(this, userBean.getHead());
+        SharedPreferenceUtils.savePhonePreference(this, userBean.getLogin_phone());
+        SharedPreferenceUtils.savepaymentAccountIdPerference(this, userBean.getPaymentAccountId());
+        SharedPreferenceUtils.saveRealNamePreference(this, userBean.getReal_name());
+        SharedPreferenceUtils.saveLoginNamePreference(this, userBean.getLogin_name());
+        SharedPreferenceUtils.saveUserSex(this, userBean.getSex());
+    }
+
+    @Override
+    public void refreshUI(boolean isOk) {
+        if (isOk) {
+            Intent intent = new Intent(this, MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish();
+        } else {
+            tvLogin.setClickable(true);
+        }
+    }
 
     /**
      * 忘记密码

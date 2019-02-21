@@ -1,6 +1,8 @@
 package taojinke.qianxing.mine.dagger.fragment.module;
 
 import dagger.Module;
+import dagger.Provides;
+import taojinke.qianxing.lib_base.dagger.FragmentScope;
 import taojinke.qianxing.mine.base.DaggerFragment;
 
 /**
@@ -27,4 +29,9 @@ public class FragmentModule {
         return fragment;
     }
 
+    @Provides
+    @FragmentScope
+    taojinke.qianxing.mine.ui.mine.MineContract.IMineView providerMineView() {
+        return (taojinke.qianxing.mine.ui.mine.MineContract.IMineView) getDaggerFragment();
+    }
 }

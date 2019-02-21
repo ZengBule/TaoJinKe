@@ -144,6 +144,7 @@ public class LauncherActivity extends DaggerActivity implements LauncherContract
                             startActivity(intent);
                         }
                     }
+                    finish();
                     break;
 
                 default:

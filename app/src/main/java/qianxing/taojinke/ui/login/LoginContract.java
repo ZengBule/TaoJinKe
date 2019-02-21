@@ -1,6 +1,7 @@
 package qianxing.taojinke.ui.login;
 
 import taojinke.qianxing.lib_base.base.BaseView;
+import taojinke.qianxing.lib_kernel.model.LoginUserBean;
 
 
 /**
@@ -17,6 +18,9 @@ import taojinke.qianxing.lib_base.base.BaseView;
 public interface LoginContract {
     interface ILoginView extends BaseView {
 
+        void saveUserInfo(LoginUserBean bean);
+
+        void refreshUI(boolean isOk);
     }
 
     interface ILoginPresenter {

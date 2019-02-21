@@ -61,6 +61,24 @@ public class ActivityModule {
         return (qianxing.taojinke.ui.login.LoginContract.ILoginView) getDaggerActivity();
     }
 
+    @Provides
+    @ActivityScope
+    qianxing.taojinke.ui.user.forgetpassword.ForgetPasswordContract.IForgetPasswordView providerForgetPasswordView() {
+        return (qianxing.taojinke.ui.user.forgetpassword.ForgetPasswordContract.IForgetPasswordView) getDaggerActivity();
+    }
+
+    @Provides
+    @ActivityScope
+    qianxing.taojinke.ui.user.verifycode.VerifyCodeContract.IVerifyCodeView providerVerifyCodeView() {
+        return (qianxing.taojinke.ui.user.verifycode.VerifyCodeContract.IVerifyCodeView) getDaggerActivity();
+    }
+
+    @Provides
+    @ActivityScope
+    qianxing.taojinke.ui.user.register.RegisterUserContract.IRegisterUserView providerRegisterUserView() {
+        return (qianxing.taojinke.ui.user.register.RegisterUserContract.IRegisterUserView) getDaggerActivity();
+    }
+
     public interface Exposes {
 
         Activity activity();

@@ -8,6 +8,7 @@ import dagger.Module;
 import dagger.Provides;
 import taojinke.qianxing.lib_base.dagger.ActivityScope;
 import taojinke.qianxing.mine.base.DaggerActivity;
+import taojinke.qianxing.mine.ui.main.MainContract;
 
 @Module
 public class ActivityModule {
@@ -41,6 +42,11 @@ public class ActivityModule {
         return daggerActivity;
     }
 
+    @Provides
+    @ActivityScope
+    MainContract.IMainView providerMainView() {
+        return (MainContract.IMainView) getDaggerActivity();
+    }
 
 
     public interface Exposes {

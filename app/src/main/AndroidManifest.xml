@@ -97,6 +97,18 @@
         <activity
             android:name=".ui.login.LoginActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.user.forgetpassword.ForgetPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.user.verifycode.VerifyCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.user.register.RegisterUserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:screenOrientation="portrait" />
 
     </application>
 

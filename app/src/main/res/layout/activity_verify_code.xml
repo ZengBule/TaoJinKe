@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y_ui_px_96.0"
+        android:layout_marginTop="@dimen/y_ui_px_50.0"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="@dimen/x_ui_px_90.0"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="@dimen/x_ui_px_18.0"
+                android:layout_height="@dimen/y_ui_px_33.0"
+                android:layout_marginLeft="@dimen/x_ui_px_30.0"
+                android:background="@mipmap/icon_back" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_next"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x_ui_px_30.0"
+            android:gravity="center"
+            android:text="下一步"
+            android:textColor="#77a9fd"
+            android:textSize="@dimen/font_ui_px_34.0" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#e4e4e1" />
+
+    <ImageView
+        android:layout_width="@dimen/x_ui_px_80.0"
+        android:layout_height="@dimen/x_ui_px_90.0"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/x_ui_px_80.0"
+        android:src="@mipmap/icon_yanzheng" />
+
+    <TextView
+        android:id="@+id/tv_guide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x_ui_px_30.0"
+        android:gravity="center"
+        android:text="输入验证码"
+        android:textColor="#2a2a2a"
+        android:textSize="@dimen/font_ui_px_50.0" />
+
+    <TextView
+        android:id="@+id/tv_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x_ui_px_30.0"
+        android:gravity="center"
+        android:text="短信验证码已发送至手机13880000000"
+        android:textColor="#a9a9a9"
+        android:textSize="@dimen/font_ui_px_30.0" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingLeft="@dimen/x_ui_px_120.0"
+        android:paddingRight="@dimen/x_ui_px_120.0"
+        android:text="请填写验证码（60S）"
+        android:textColor="#a9a9a9"
+        android:textSize="@dimen/font_ui_px_30.0" />
+
+    <taojinke.qianxing.lib_weight.PwdEditText1
+        android:id="@+id/et_yzm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y_ui_px_120.0"
+        android:layout_marginLeft="@dimen/x_ui_px_30.0"
+        android:layout_marginTop="@dimen/y_ui_px_120.0"
+        android:layout_marginRight="@dimen/x_ui_px_30.0"
+        android:background="@android:color/transparent"
+        android:cursorVisible="true"
+        android:enabled="true"
+        android:gravity="center"
+        android:maxLength="6" />
+
+
+</LinearLayout>

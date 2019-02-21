@@ -1,9 +1,12 @@
 package taojinke.qianxing.mine.dagger.fragment.module;
 
 import dagger.Module;
+import dagger.Provides;
 import taojinke.qianxing.lib_base.dagger.FragmentScope;
 import taojinke.qianxing.mine.base.DaggerFragment;
 import taojinke.qianxing.mine.dagger.fragment.FragmentComponent;
+import taojinke.qianxing.mine.ui.mine.MineContract;
+import taojinke.qianxing.mine.ui.mine.MinePresenter;
 
 /**
  * ***********************************************
@@ -35,4 +38,11 @@ public class FragmentPresenterModule {
         return daggerFragment;
     }
 
+    @Provides
+    @FragmentScope
+    MineContract.IMinePresenter providerMinePresenter() {
+        MinePresenter presenter = new taojinke.qianxing.mine.ui.mine.MinePresenter();
+        getFragmentComponent().inject(presenter);
+        return presenter;
+    }
 }

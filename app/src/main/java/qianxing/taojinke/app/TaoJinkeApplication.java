@@ -4,7 +4,7 @@ package qianxing.taojinke.app;
 import android.content.Context;
 
 import qianxing.taojinke.TaoJinKeApplicationLike;
-import qianxing.taojinke.util.BaseUrlManger;
+import taojinke.qianxing.lib_kernel.url.BaseUrlManger;
 import taojinke.qianxing.lib_base.app.ApplicationLike;
 import taojinke.qianxing.lib_base.app.LifecycleApplication;
 import taojinke.qianxing.lib_kernel.http.app.Configurator;
