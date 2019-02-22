@@ -67,4 +67,7 @@ dependencies {
     annotationProcessor ddf.butterknifeCompiler
     implementation ddf.rxJava
     implementation ddf.rxAndroid
+    if (!isModule) {
+        implementation ddf.fastjson
+    }
 }
