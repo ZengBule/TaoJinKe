@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/lib-kernel/lib-kernel.iml" filepath="$PROJECT_DIR$/lib-kernel/lib-kernel.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib-weight/lib-weight.iml" filepath="$PROJECT_DIR$/lib-weight/lib-weight.iml" />
       <module fileurl="file://$PROJECT_DIR$/mine/mine.iml" filepath="$PROJECT_DIR$/mine/mine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/task/task.iml" filepath="$PROJECT_DIR$/task/task.iml" />
       <module fileurl="file://$PROJECT_DIR$/train/train.iml" filepath="$PROJECT_DIR$/train/train.iml" />
     </modules>
   </component>

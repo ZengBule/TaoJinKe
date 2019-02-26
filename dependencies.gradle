@@ -1,5 +1,6 @@
 ext {
-    isModule = true
+    isModule = false
+
     android = [
             sdkVersion       : 28,
             buildToolsVersion: '28.0.3',
@@ -43,7 +44,8 @@ ext {
             'gifdrawable'        : "pl.droidsonroids.gif:android-gif-drawable:1.2.8",
             'jodaTime'           : "joda-time:joda-time:2.9.4",
             'andPermission'      : "com.yanzhenjie:permission:2.0.0-rc4",
-            'log'                : "com.orhanobut:logger:2.2.0"
+            'log'                : "com.orhanobut:logger:2.2.0",
+            'multiAdapter'        : "me.drakeet.multitype:multitype:3.5.0"
 
 
     ]

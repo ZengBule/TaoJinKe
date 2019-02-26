@@ -1,1 +1,1 @@
-include ':app', ':lib-base', ':lib-weight', ':lib-kernel', ':train', ':chat', ':mine', ':lib-core'
+include ':app', ':lib-base', ':lib-weight', ':lib-kernel', ':train', ':chat', ':mine', ':lib-core', ':task'

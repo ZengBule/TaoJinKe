@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/lib-kernel" />
             <option value="$PROJECT_DIR$/lib-weight" />
             <option value="$PROJECT_DIR$/mine" />
+            <option value="$PROJECT_DIR$/task" />
             <option value="$PROJECT_DIR$/train" />
           </set>
         </option>

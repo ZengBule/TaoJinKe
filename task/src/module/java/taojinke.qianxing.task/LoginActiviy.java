@@ -1,4 +1,4 @@
-package taojinke.qianxing.train;
+package taojinke.qianxing.task;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,6 +21,7 @@ import taojinke.qianxing.lib_kernel.http.BaseBean;
 import taojinke.qianxing.lib_kernel.http.net.rx.RxRestClient;
 import taojinke.qianxing.lib_kernel.model.LoginUserBean;
 import taojinke.qianxing.lib_kernel.sharedpreference.SharedPreferenceUtils;
+import taojinke.qianxing.task.ui.status.TaskExecutingActivity;
 
 public class LoginActiviy extends AppCompatActivity {
 
@@ -34,7 +35,7 @@ public class LoginActiviy extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.trian_activity_login);
+        setContentView(R.layout.task_activity_login);
         ButterKnife.bind(this);
     }
 
@@ -80,7 +81,7 @@ public class LoginActiviy extends AppCompatActivity {
                             SharedPreferenceUtils.saveLoginNamePreference(LoginActiviy.this, userBean.getLogin_name());
                             SharedPreferenceUtils.saveUserSex(LoginActiviy.this, userBean.getSex());
 
-                            Intent intent = new Intent(LoginActiviy.this, MainActivity.class);
+                            Intent intent = new Intent(LoginActiviy.this, TaskExecutingActivity.class);
                             startActivity(intent);
                         } else {
                             SharedPreferenceUtils.saveisLoginPerference(LoginActiviy.this, "no");
@@ -97,5 +98,6 @@ public class LoginActiviy extends AppCompatActivity {
 
                     }
                 });
+
     }
 }
