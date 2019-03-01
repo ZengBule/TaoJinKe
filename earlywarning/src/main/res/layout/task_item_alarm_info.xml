@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/commitWarning"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x_ui_px_70.0"
+        android:layout_marginLeft="@dimen/x_ui_px_30.0"
+        android:layout_marginRight="@dimen/x_ui_px_30.0"
+        android:background="@drawable/shape_red_exclamation_40dp"
+        android:gravity="center"
+        android:paddingLeft="@dimen/x_ui_px_20.0"
+        android:text="突发异常报备"
+        android:textColor="@color/white"
+        android:textSize="@dimen/x_ui_px_32.0"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x_ui_px_30.0"
+        android:layout_marginTop="@dimen/x_ui_px_20.0"
+        android:layout_marginRight="@dimen/x_ui_px_30.0"
+        android:gravity="center_horizontal"
+        android:text="已紧急报备,请及时告知主管,
+        调整排班及相关事项"
+        android:visibility="gone"
+
+        />
+</LinearLayout>

@@ -1,7 +1,8 @@
 package taojinke.qianxing.lib_weight.loading.view;
 
-import android.support.annotation.NonNull;
 import android.view.View;
+
+import androidx.annotation.NonNull;
 
 /**
  * Created by dgg on 2017/11/7.

@@ -2,7 +2,6 @@ package taojinke.qianxing.lib_weight.calendar.month;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.v4.view.PagerAdapter;
 import android.util.SparseArray;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +10,7 @@ import android.view.ViewGroup.LayoutParams;
 
 import org.joda.time.DateTime;
 
+import androidx.viewpager.widget.PagerAdapter;
 import taojinke.qianxing.lib_weight.R;
 
 /**

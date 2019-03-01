@@ -1,8 +1,5 @@
 package taojinke.qianxing.core;
 
-import android.content.Context;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Environment;
 import android.text.TextPaint;
 import android.widget.TextView;
@@ -57,12 +54,5 @@ public class OtherUtil {
 
     }
 
-    //判断是否连接wifi
-    public static boolean isWifiConnected(Context context)
-    {
-        ConnectivityManager connectivityManager = (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo wifiNetworkInfo = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
-        return wifiNetworkInfo.isConnected();
 
-    }
 }

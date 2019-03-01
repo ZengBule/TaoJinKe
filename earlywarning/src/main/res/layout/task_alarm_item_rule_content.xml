@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/x_ui_px_97.0"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x_ui_px_72.0">
+
+        <TextView
+            android:layout_width="@dimen/x_ui_px_12.0"
+            android:layout_height="@dimen/x_ui_px_12.0"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x_ui_px_22.0"
+            android:background="@drawable/alarm_rule_speak_dot_858d8c" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x_ui_px_40.0"
+            android:layout_marginRight="@dimen/x_ui_px_84.0"
+            android:background="@drawable/alarm_rule_speak_content_background">
+
+            <TextView
+                android:id="@+id/tv_time_part"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/x_ui_px_27.0"
+                android:drawableLeft="@mipmap/alarm_rule_and_speak"
+                android:drawablePadding="@dimen/x_ui_px_17.0"
+                android:text="0-5分钟"
+                android:textColor="#666666" />
+
+            <TextView
+                android:id="@+id/tv_rule_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/x_ui_px_40.0"
+                android:layout_marginRight="@dimen/x_ui_px_20.0"
+                android:lines="1"
+                android:text="按平台服务手册22条规则处理" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

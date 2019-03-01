@@ -1,8 +1,8 @@
 package taojinke.qianxing.lib_weight.loading.change.impl;
 
-import android.support.annotation.NonNull;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
 import taojinke.qianxing.lib_weight.loading.change.SwitchLayoutHelper;
 import taojinke.qianxing.lib_weight.loading.view.IStatusView;
 
@@ -41,7 +41,9 @@ class ReplaceSwitchLayoutHelper implements SwitchLayoutHelper {
 
     @Override
     public synchronized void switchLayout(@NonNull IStatusView targetView) {
-        if (mCurrentView == targetView) return;
+        if (mCurrentView == targetView) {
+            return;
+        }
         indexOfView = mParentView.indexOfChild(mCurrentView.getView());
 
         if (mParentView.getChildAt(indexOfView) != targetView) {

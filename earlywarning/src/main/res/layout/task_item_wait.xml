@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/ll_item_plan_task_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x_ui_px_30.0"
+        android:layout_marginRight="@dimen/x_ui_px_30.0"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/tv_plan_task_point"
+            android:layout_width="@dimen/x_ui_px_20.0"
+            android:layout_height="@dimen/x_ui_px_20.0"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x_ui_px_10.0"
+            android:background="@drawable/bg_circle_77a9fd"
+            android:textSize="@dimen/font_ui_px_28.0" />
+
+        <TextView
+            android:id="@+id/tv_plan_task_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x_ui_px_20.0"
+            android:layout_toRightOf="@+id/tv_plan_task_point"
+            android:text="今天"
+            android:textColor="#FFBEBEBE"
+            android:textSize="@dimen/font_ui_px_28.0" />
+
+        <TextView
+            android:id="@+id/serviceTimeHintTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text=""
+            android:textColor="#FFBEBEBE"
+            android:textSize="@dimen/font_ui_px_28.0" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x_ui_px_170.0"
+        android:layout_marginLeft="@dimen/x_ui_px_30.0"
+        android:layout_marginTop="@dimen/x_ui_px_30.0"
+        android:layout_marginRight="@dimen/x_ui_px_30.0"
+        android:background="@drawable/white_buttom_radius">
+
+        <ImageView
+            android:id="@+id/headImg"
+            android:layout_width="@dimen/x_ui_px_50.0"
+            android:layout_height="@dimen/x_ui_px_50.0"
+            android:layout_marginLeft="@dimen/x_ui_px_30.0"
+            android:layout_marginTop="@dimen/x_ui_px_30.0"
+            android:src="@mipmap/task_icon_profile" />
+
+        <TextView
+            android:id="@+id/shopName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x_ui_px_30.0"
+            android:layout_marginTop="@dimen/x_ui_px_36.0"
+            android:layout_toRightOf="@+id/headImg"
+            android:text="河马童装店"
+            android:textColor="#2A2A2A"
+            android:textSize="@dimen/x_ui_px_32.0" />
+
+        <ImageView
+            android:id="@+id/itemPoint"
+            android:layout_width="@dimen/x_ui_px_26.0"
+            android:layout_height="@dimen/x_ui_px_26.0"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/x_ui_px_30.0"
+            android:layout_marginRight="@dimen/x_ui_px_30.0"
+            android:src="@drawable/bg_circle_77a9fd" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/shopName"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/x_ui_px_30.0"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/x_ui_px_30.0"
+                android:layout_height="@dimen/x_ui_px_30.0"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/task_icon_time_black" />
+
+            <TextView
+                android:id="@+id/serveTimeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/x_ui_px_10.0"
+                android:text="服务时间18:00-20:00"
+                android:textColor="#757575"
+                android:textSize="@dimen/x_ui_px_32.0" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/hourlyPayTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="@dimen/x_ui_px_30.0"
+            android:text=""
+            android:textColor="#2a2a2a"
+            android:textSize="@dimen/x_ui_px_32.0" />
+
+    </RelativeLayout>
+
+</LinearLayout>

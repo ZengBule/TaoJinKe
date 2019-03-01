@@ -6,12 +6,12 @@
       <module fileurl="file://$PROJECT_DIR$/TaoJinKe.iml" filepath="$PROJECT_DIR$/TaoJinKe.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/chat/chat.iml" filepath="$PROJECT_DIR$/chat/chat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/earlywarning/earlywarning.iml" filepath="$PROJECT_DIR$/earlywarning/earlywarning.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib-base/lib-base.iml" filepath="$PROJECT_DIR$/lib-base/lib-base.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib-core/lib-core.iml" filepath="$PROJECT_DIR$/lib-core/lib-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib-kernel/lib-kernel.iml" filepath="$PROJECT_DIR$/lib-kernel/lib-kernel.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib-weight/lib-weight.iml" filepath="$PROJECT_DIR$/lib-weight/lib-weight.iml" />
       <module fileurl="file://$PROJECT_DIR$/mine/mine.iml" filepath="$PROJECT_DIR$/mine/mine.iml" />
-      <module fileurl="file://$PROJECT_DIR$/task/task.iml" filepath="$PROJECT_DIR$/task/task.iml" />
       <module fileurl="file://$PROJECT_DIR$/train/train.iml" filepath="$PROJECT_DIR$/train/train.iml" />
     </modules>
   </component>

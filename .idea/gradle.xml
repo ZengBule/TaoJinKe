@@ -10,12 +10,12 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/chat" />
+            <option value="$PROJECT_DIR$/earlywarning" />
             <option value="$PROJECT_DIR$/lib-base" />
             <option value="$PROJECT_DIR$/lib-core" />
             <option value="$PROJECT_DIR$/lib-kernel" />
             <option value="$PROJECT_DIR$/lib-weight" />
             <option value="$PROJECT_DIR$/mine" />
-            <option value="$PROJECT_DIR$/task" />
             <option value="$PROJECT_DIR$/train" />
           </set>
         </option>

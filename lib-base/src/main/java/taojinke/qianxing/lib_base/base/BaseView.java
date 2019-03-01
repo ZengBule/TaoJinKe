@@ -3,8 +3,8 @@ package taojinke.qianxing.lib_base.base;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.annotation.StringRes;
 
+import androidx.annotation.StringRes;
 import io.reactivex.ObservableTransformer;
 
 public interface BaseView {

@@ -1,7 +1,7 @@
 package taojinke.qianxing.lib_weight.loading.change;
 
-import android.support.annotation.NonNull;
 
+import androidx.annotation.NonNull;
 import taojinke.qianxing.lib_weight.loading.view.IStatusView;
 
 

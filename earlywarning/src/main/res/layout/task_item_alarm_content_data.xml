@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/x_ui_px_147.0"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x_ui_px_30.0"
+        android:layout_marginTop="@dimen/x_ui_px_26.0"
+        android:text="等待上班打卡"
+        android:textColor="@color/FF2A2A2A"
+        android:textSize="@dimen/x_ui_px_32.0" />
+
+    <LinearLayout
+        android:id="@+id/countdownViewLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/x_ui_px_30.0"
+        android:layout_marginTop="@dimen/x_ui_px_26.0"
+        android:orientation="vertical" />
+
+    <TextView
+        android:id="@+id/shopName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/x_ui_px_26.0"
+        android:layout_marginLeft="@dimen/x_ui_px_30.0"
+        android:textColor="#757575"
+        android:textSize="@dimen/x_ui_px_30.0"
+        tools:text="千行你我花费专营店" />
+
+    <TextView
+        android:id="@+id/alarmStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/x_ui_px_26.0"
+        android:layout_marginLeft="@dimen/x_ui_px_30.0"
+        android:layout_marginRight="@dimen/x_ui_px_30.0"
+        android:textColor="#FF6060"
+        android:textSize="@dimen/x_ui_px_28.0"
+        tools:text="已經抱緊" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x_ui_px_1.0"
+        android:layout_alignParentBottom="true"
+        android:background="#f5f5f5"
+
+        />
+</RelativeLayout>

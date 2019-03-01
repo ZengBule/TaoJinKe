@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <View
+        android:id="@+id/paddingLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x_ui_px_30.0"
+        android:background="@color/white" />
+
+    <RelativeLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="46dp"
+            android:layout_height="@dimen/x_ui_px_80.0"
+            android:layout_centerVertical="true"
+            android:scaleType="center"
+            android:src="@mipmap/icon_back_black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="执行中任务"
+            android:textColor="@color/FF2A2A2A"
+            android:textSize="@dimen/x_ui_px_32.0"
+
+            />
+
+        <TextView
+            android:id="@+id/goToMyClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x_ui_px_20.0"
+            android:text="我的排班"
+            android:textColor="@color/FF2A2A2A"
+            android:textSize="@dimen/x_ui_px_32.0"
+
+            />
+
+    </RelativeLayout>
+
+    <fragment
+        android:id="@+id/executingFragment"
+        android:name="taojinke.qianxing.earlywarning.ui.executing.TaskExecutingFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

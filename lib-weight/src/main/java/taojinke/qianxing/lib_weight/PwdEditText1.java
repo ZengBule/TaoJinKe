@@ -9,11 +9,13 @@ import android.graphics.Rect;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 
+import androidx.appcompat.widget.AppCompatEditText;
+
 /**
  *
  * 自定义密码输入框
  */
-public class PwdEditText1 extends android.support.v7.widget.AppCompatEditText {
+public class PwdEditText1 extends AppCompatEditText {
 
     /**
      * 间隔

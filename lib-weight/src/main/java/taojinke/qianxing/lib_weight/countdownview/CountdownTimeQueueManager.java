@@ -27,7 +27,7 @@ public class CountdownTimeQueueManager extends BaseCountdownTimeQueueManager {
     void initCountdownTimeQueueManager(int modules) {
         timeQueue = new ArrayList<>();
         timeTimer = new Timer(true);
-        if (timeTask!=null){
+        if (timeTask != null) {
             timeTask.cancel();
         }
         timeTask = new TimerTask() {
@@ -40,6 +40,8 @@ public class CountdownTimeQueueManager extends BaseCountdownTimeQueueManager {
                     case 2:
                         countupTimeQueue();
                         break;
+                    default:
+                        break;
                 }
             }
         };
@@ -49,7 +51,7 @@ public class CountdownTimeQueueManager extends BaseCountdownTimeQueueManager {
     @Override
     public CountdownTime addTime(int time, String id, CountdownTime.OnCountdownTimeListener listener) {
         CountdownTime countdownTime;
-        if (timeQueue.size() > 0)
+        if (timeQueue.size() > 0) {
             for (int i = 0; i < timeQueue.size(); i++) {
                 countdownTime = timeQueue.get(i);
                 if (TextUtils.equals(countdownTime.getId(), id)) {
@@ -57,6 +59,7 @@ public class CountdownTimeQueueManager extends BaseCountdownTimeQueueManager {
                     return countdownTime;
                 }
             }
+        }
         countdownTime = new CountdownTime(time, id, listener);
         timeQueue.add(countdownTime);
         return countdownTime;
@@ -66,8 +69,9 @@ public class CountdownTimeQueueManager extends BaseCountdownTimeQueueManager {
     synchronized void countdownTimeQueue() {
         if (timeQueue != null && timeQueue.size() > 0) {
             for (int i = 0; i < timeQueue.size(); i++) {
-                if (timeQueue.get(i).countdown())
+                if (timeQueue.get(i).countdown()) {
                     i--;
+                }
             }
         }
     }
@@ -76,8 +80,9 @@ public class CountdownTimeQueueManager extends BaseCountdownTimeQueueManager {
     synchronized void countupTimeQueue() {
         if (timeQueue != null && timeQueue.size() > 0) {
             for (int i = 0; i < timeQueue.size(); i++) {
-                if (timeQueue.get(i).countUp())
+                if (timeQueue.get(i).countUp()) {
                     i++;
+                }
             }
         }
     }

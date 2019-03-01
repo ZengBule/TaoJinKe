@@ -46,4 +46,7 @@ dependencies {
     compileOnly ddf.butterknife
     annotationProcessor ddf.butterknifeCompiler
     compileOnly ddf.multiAdapter
+
+    compileOnly project(path: ':lib-kernel')
+    compileOnly project(path: ':lib-core')
 }

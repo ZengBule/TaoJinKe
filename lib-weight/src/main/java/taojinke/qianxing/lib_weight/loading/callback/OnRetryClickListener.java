@@ -1,7 +1,8 @@
 package taojinke.qianxing.lib_weight.loading.callback;
 
-import android.support.annotation.NonNull;
 import android.view.View;
+
+import androidx.annotation.NonNull;
 
 /**
  * 重试

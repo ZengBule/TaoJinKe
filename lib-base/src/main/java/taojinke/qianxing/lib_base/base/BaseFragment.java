@@ -4,13 +4,14 @@ package taojinke.qianxing.lib_base.base;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.fragment.app.Fragment;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
+import cn.nekocode.rxlifecycle.RxLifecycle;
 import io.reactivex.ObservableTransformer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
@@ -93,7 +94,7 @@ public abstract class BaseFragment extends Fragment implements BaseView {
 
     @Override
     public <T> ObservableTransformer<T, T> bindLifecycle() {
-        return null;
+        return RxLifecycle.bind(mContext).withObservable();
     }
 
     @Override

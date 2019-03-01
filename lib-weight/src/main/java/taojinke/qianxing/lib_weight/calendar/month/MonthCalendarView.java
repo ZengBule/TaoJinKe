@@ -2,13 +2,13 @@ package taojinke.qianxing.lib_weight.calendar.month;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.util.SparseArray;
 
 
 import java.util.Calendar;
 
+import androidx.viewpager.widget.ViewPager;
 import taojinke.qianxing.lib_weight.R;
 import taojinke.qianxing.lib_weight.calendar.OnCalendarClickListener;
 

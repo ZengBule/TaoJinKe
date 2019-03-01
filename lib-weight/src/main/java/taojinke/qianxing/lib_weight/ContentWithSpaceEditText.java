@@ -10,11 +10,13 @@ import android.text.TextWatcher;
 import android.text.method.DigitsKeyListener;
 import android.util.AttributeSet;
 
+import androidx.appcompat.widget.AppCompatEditText;
+
 /**
  * Created by Administrator on 2017/10/9.
  */
 
-public class ContentWithSpaceEditText extends android.support.v7.widget.AppCompatEditText {
+public class ContentWithSpaceEditText extends AppCompatEditText {
     public static final int TYPE_PHONE = 0;
     public static final int TYPE_CARD = 1;
     public static final int TYPE_IDCARD = 2;

@@ -1,8 +1,8 @@
 package taojinke.qianxing.lib_weight.loading;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
 
+import androidx.annotation.Nullable;
 import taojinke.qianxing.lib_weight.loading.callback.OnRetryClickListener;
 import taojinke.qianxing.lib_weight.loading.view.EmptyStatusView;
 import taojinke.qianxing.lib_weight.loading.view.ErrorStatusView;

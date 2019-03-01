@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/x_ui_px_90.0"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/hintText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/x_ui_px_30.0"
+        android:drawableLeft="@mipmap/task_icon_warning"
+        android:drawablePadding="4dp"
+        android:gravity="center_vertical"
+        android:text="待确认预警，请在电脑上确认并及时处理" />
+
+</LinearLayout>

@@ -1,9 +1,10 @@
 package taojinke.qianxing.lib_weight.calendar.schedule;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
+
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Created by Jimmy on 2016/10/8 0008.

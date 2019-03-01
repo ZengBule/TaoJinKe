@@ -10,10 +10,11 @@ import android.util.AttributeSet;
 
 import java.lang.ref.WeakReference;
 
-import qianxing.taojinke.R;
+import androidx.appcompat.widget.AppCompatTextView;
+import taojinke.qianxing.lib_weight.R;
 
 
-public class CountdownView extends android.support.v7.widget.AppCompatTextView implements CountdownTime.OnCountdownTimeListener {
+public class CountdownView extends AppCompatTextView implements CountdownTime.OnCountdownTimeListener {
     /**
      * 当前控件绑定的倒计时实践对象id，由于重用，RecyclerView滚动的时候，
      * 会复用view，导致里面显示的时间其实是不一样的
@@ -38,9 +39,14 @@ public class CountdownView extends android.support.v7.widget.AppCompatTextView i
      * 时间显示格式
      */
     public enum TYPE {
-        H_M_S,//00:00:00
-        ONLY_S_C,//9000秒
-        M_S_C,//0分钟0秒
+        /**
+         * //00:00:00
+         * //9000秒
+         * //0分钟0秒
+         */
+        H_M_S,
+        ONLY_S_C,
+        M_S_C,
     }
 
     public CountdownView setTimeFormat(TYPE type) {
@@ -99,6 +105,8 @@ public class CountdownView extends android.support.v7.widget.AppCompatTextView i
                     break;
                 case "ONLY_S_C":
                     testString = countdownTime.getTimeTextTypeTwo();
+                    break;
+                default:
                     break;
             }
 

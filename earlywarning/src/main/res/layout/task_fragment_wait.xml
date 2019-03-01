@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/smart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x_ui_px_74.0"
+                android:background="#5b5b5b"
+                android:orientation="horizontal" />
+
+
+            <RelativeLayout
+                android:id="@+id/historyFinishLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x_ui_px_110.0"
+                android:layout_marginLeft="@dimen/x_ui_px_30.0"
+                android:layout_marginTop="@dimen/x_ui_px_20.0"
+                android:layout_marginRight="@dimen/x_ui_px_30.0"
+                android:background="@drawable/white_buttom_radius">
+
+                <TextView
+                    android:id="@+id/historyFinishTaskTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x_ui_px_30.0"
+                    android:text="历史共完成0小时任务"
+                    android:textColor="#2a2a2a"
+                    android:textSize="@dimen/x_ui_px_30.0" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x_ui_px_30.0"
+                    android:src="@mipmap/icon_personal_more" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/datalayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/historyFinishLayout"
+                android:layout_marginTop="@dimen/x_ui_px_30.0"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x_ui_px_30.0" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/recycle"
+                    android:layout_marginTop="@dimen/x_ui_px_40.0"
+                    android:layout_marginBottom="@dimen/x_ui_px_40.0">
+
+                    <LinearLayout
+                        android:id="@+id/moreTvLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="更多任务"
+                            android:textColor="#6a6a6a"
+                            android:textSize="@dimen/x_ui_px_26.0" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/x_ui_px_14.0"
+                            android:text="还请联系主管"
+                            android:textColor="#6a6a6a"
+                            android:textSize="@dimen/x_ui_px_26.0" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x_ui_px_1.0"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/x_ui_px_125.0"
+                        android:layout_marginRight="@dimen/x_ui_px_19.0"
+                        android:layout_toLeftOf="@+id/moreTvLayout"
+                        android:background="#C6C6C6" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x_ui_px_1.0"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/x_ui_px_19.0"
+                        android:layout_marginRight="@dimen/x_ui_px_125.0"
+                        android:layout_toRightOf="@+id/moreTvLayout"
+                        android:background="#C6C6C6" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/noDataLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/x_ui_px_240.0"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/task_icon_wait_none" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x_ui_px_59.0"
+                android:text="你没有需要执行的任务"
+                android:textColor="#919191"
+                android:textSize="@dimen/x_ui_px_32.0" />
+
+            <TextView
+                android:id="@+id/getTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/x_ui_px_39.0"
+                android:background="@drawable/bg_blue_circle_corner_60px"
+                android:paddingLeft="@dimen/x_ui_px_67.0"
+                android:paddingTop="@dimen/x_ui_px_25.0"
+                android:paddingRight="@dimen/x_ui_px_67.0"
+                android:paddingBottom="@dimen/x_ui_px_25.0"
+                android:text="立即领取"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/x_ui_px_32.0" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

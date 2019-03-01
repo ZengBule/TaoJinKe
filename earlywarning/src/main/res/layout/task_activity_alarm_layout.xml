@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_common_head_no_back" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x_ui_px_30.0"
+                android:layout_marginRight="@dimen/x_ui_px_30.0"
+                android:layout_marginTop="@dimen/x_ui_px_29.0"
+                android:lineSpacingExtra="@dimen/x_ui_px_10.0"
+                android:text="如果发生异常情况请务必告知， 相信主管和小伙伴能够帮助到你"
+                android:textColor="@color/FF2A2A2A"
+                android:textSize="@dimen/x_ui_px_32.0" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x_ui_px_1.0"
+                android:layout_marginLeft="@dimen/x_ui_px_30.0"
+                android:layout_marginRight="@dimen/x_ui_px_30.0"
+                android:layout_marginTop="@dimen/x_ui_px_30.0"
+                android:background="#F5f5f5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x_ui_px_30.0"
+                android:layout_marginTop="@dimen/x_ui_px_26.0"
+                android:text="我这里发生了"
+                android:textColor="@color/FF2A2A2A"
+                android:textSize="@dimen/x_ui_px_36.0" />
+
+            <RelativeLayout
+                android:id="@+id/layoutTypeOne"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x_ui_px_70.0"
+                android:layout_marginLeft="@dimen/x_ui_px_30.0"
+                android:layout_marginRight="@dimen/x_ui_px_30.0"
+                android:layout_marginTop="@dimen/x_ui_px_30.0"
+                android:background="@drawable/bg_blue_circle_corner_60px">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x_ui_px_20.0"
+                    android:src="@mipmap/icon_task_gou" />
+
+                <TextView
+                    android:id="@+id/typeOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/x_ui_px_70.0"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/x_ui_px_30.0"
+                    android:layout_marginRight="@dimen/x_ui_px_30.0"
+                    android:layout_marginTop="@dimen/x_ui_px_30.0"
+                    android:gravity="center"
+                    android:text="停电"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x_ui_px_32.0" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutTypeTwo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x_ui_px_70.0"
+                android:layout_marginLeft="@dimen/x_ui_px_30.0"
+                android:layout_marginRight="@dimen/x_ui_px_30.0"
+                android:layout_marginTop="@dimen/x_ui_px_30.0"
+                android:background="@drawable/c1c1c1_buttom_radius">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x_ui_px_20.0"
+                    android:layout_marginStart="@dimen/x_ui_px_20.0"
+                    android:src="@mipmap/icon_task_gou" />
+
+                <TextView
+                    android:id="@+id/typeTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/x_ui_px_70.0"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/x_ui_px_30.0"
+                    android:layout_marginRight="@dimen/x_ui_px_30.0"
+                    android:layout_marginTop="@dimen/x_ui_px_30.0"
+                    android:gravity="center"
+                    android:text="断网"
+                    android:textColor="@color/FF2A2A2A"
+                    android:textSize="@dimen/x_ui_px_32.0" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/layoutTypeThree"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x_ui_px_70.0"
+                android:layout_marginLeft="@dimen/x_ui_px_30.0"
+                android:layout_marginRight="@dimen/x_ui_px_30.0"
+                android:layout_marginTop="@dimen/x_ui_px_30.0"
+                android:background="@drawable/c1c1c1_buttom_radius"
+
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x_ui_px_20.0"
+                    android:layout_marginStart="@dimen/x_ui_px_20.0"
+                    android:src="@mipmap/icon_task_gou" />
+
+                <TextView
+                    android:id="@+id/typeThree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/x_ui_px_70.0"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/x_ui_px_30.0"
+                    android:layout_marginRight="@dimen/x_ui_px_30.0"
+                    android:layout_marginTop="@dimen/x_ui_px_30.0"
+                    android:gravity="center"
+                    android:text="其他"
+                    android:textColor="@color/FF2A2A2A"
+                    android:textSize="@dimen/x_ui_px_32.0" />
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x_ui_px_1.0"
+                android:layout_marginLeft="@dimen/x_ui_px_30.0"
+                android:layout_marginRight="@dimen/x_ui_px_30.0"
+                android:layout_marginTop="@dimen/x_ui_px_30.0"
+                android:background="#F5f5f5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x_ui_px_30.0"
+                android:layout_marginTop="@dimen/x_ui_px_26.0"
+                android:text="急需"
+                android:textColor="@color/FF2A2A2A"
+                android:textSize="@dimen/x_ui_px_36.0" />
+
+            <RelativeLayout
+                android:id="@+id/layoutMustTypeOne"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x_ui_px_70.0"
+                android:layout_marginLeft="@dimen/x_ui_px_30.0"
+                android:layout_marginRight="@dimen/x_ui_px_30.0"
+                android:layout_marginTop="@dimen/x_ui_px_30.0"
+                android:background="@drawable/bg_blue_circle_corner_60px">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x_ui_px_20.0"
+                    android:layout_marginStart="@dimen/x_ui_px_20.0"
+                    android:src="@mipmap/icon_task_gou" />
+
+                <TextView
+                    android:id="@+id/mustTypeOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="队友顶班"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x_ui_px_32.0" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutMustTypeTwo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x_ui_px_70.0"
+                android:layout_marginLeft="@dimen/x_ui_px_30.0"
+                android:layout_marginRight="@dimen/x_ui_px_30.0"
+                android:layout_marginTop="@dimen/x_ui_px_30.0"
+                android:background="@drawable/c1c1c1_buttom_radius">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x_ui_px_20.0"
+                    android:layout_marginStart="@dimen/x_ui_px_20.0"
+                    android:src="@mipmap/icon_task_gou" />
+
+                <TextView
+                    android:id="@+id/mustTypeTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/x_ui_px_70.0"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/x_ui_px_30.0"
+                    android:layout_marginRight="@dimen/x_ui_px_30.0"
+                    android:layout_marginTop="@dimen/x_ui_px_30.0"
+                    android:gravity="center"
+                    android:text="10分钟处理"
+                    android:textColor="@color/FF2A2A2A"
+                    android:textSize="@dimen/x_ui_px_32.0" />
+
+
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x_ui_px_1.0"
+                android:layout_marginLeft="@dimen/x_ui_px_30.0"
+                android:layout_marginRight="@dimen/x_ui_px_30.0"
+                android:layout_marginTop="@dimen/x_ui_px_30.0"
+                android:background="#F5f5f5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x_ui_px_30.0"
+                android:layout_marginTop="@dimen/x_ui_px_26.0"
+                android:text="添加照片"
+                android:textColor="@color/FF2A2A2A"
+                android:textSize="@dimen/x_ui_px_36.0" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x_ui_px_30.0"
+                android:layout_marginRight="@dimen/x_ui_px_30.0"
+                android:layout_marginTop="@dimen/x_ui_px_30.0" />
+
+            <EditText
+                android:id="@+id/remark"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x_ui_px_200.0"
+                android:layout_marginLeft="@dimen/x_ui_px_30.0"
+                android:layout_marginRight="@dimen/x_ui_px_30.0"
+                android:layout_marginTop="@dimen/x_ui_px_30.0"
+                android:background="@drawable/c1c1c1_buttom_radius_4_y"
+                android:gravity="top"
+                android:hint="额外补充"
+                android:lineSpacingExtra="4dp"
+                android:textColor="@color/FF2A2A2A"
+                android:textSize="@dimen/x_ui_px_32.0" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/commit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x_ui_px_80.0"
+        android:layout_marginBottom="@dimen/x_ui_px_30.0"
+        android:layout_marginLeft="@dimen/x_ui_px_30.0"
+        android:layout_marginRight="@dimen/x_ui_px_30.0"
+        android:layout_marginTop="@dimen/x_ui_px_30.0"
+        android:background="@drawable/bg_blue_circle_corner_60px"
+        android:gravity="center"
+        android:paddingLeft="@dimen/x_ui_px_20.0"
+        android:text="突发异常报备"
+        android:textColor="@color/white"
+        android:textSize="@dimen/x_ui_px_32.0" />
+</LinearLayout>

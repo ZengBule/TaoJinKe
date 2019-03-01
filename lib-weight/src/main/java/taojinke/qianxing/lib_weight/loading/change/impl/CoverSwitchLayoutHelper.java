@@ -1,10 +1,10 @@
 package taojinke.qianxing.lib_weight.loading.change.impl;
 
-import android.support.annotation.NonNull;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
+import androidx.annotation.NonNull;
 import taojinke.qianxing.lib_weight.loading.change.SwitchLayoutHelper;
 import taojinke.qianxing.lib_weight.loading.view.IStatusView;
 
@@ -53,14 +53,17 @@ class CoverSwitchLayoutHelper implements SwitchLayoutHelper {
 
     @Override
     public synchronized void switchLayout(@NonNull IStatusView targetView) {
-        if (mCurrentView == targetView) return;
+        if (mCurrentView == targetView){
+            return;
+        }
 
         if (mFrameLayout.getChildCount() == 2) {
             mFrameLayout.removeViewAt(1);
         }
 
-        if (targetView != mOriginView) mFrameLayout.addView(targetView.getView(), 1, originParams);
-
+        if (targetView != mOriginView) {
+            mFrameLayout.addView(targetView.getView(), 1, originParams);
+        }
         mCurrentView = targetView;
 
     }
