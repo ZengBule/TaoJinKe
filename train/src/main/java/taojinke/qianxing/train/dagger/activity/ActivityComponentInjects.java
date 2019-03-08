@@ -15,4 +15,7 @@ package taojinke.qianxing.train.dagger.activity;
 public interface ActivityComponentInjects {
 
 
+    void inject(taojinke.qianxing.train.ui.main.MainPresenter presenter);
+
+    void inject(taojinke.qianxing.train.ui.main.MainActivity activity);
 }

@@ -17,13 +17,14 @@ package qianxing.taojinke.ui.launcher;
 
 import android.content.Context;
 import android.content.DialogInterface;
-import android.support.v7.app.AlertDialog;
 
 import com.yanzhenjie.permission.Permission;
 import com.yanzhenjie.permission.Rationale;
 import com.yanzhenjie.permission.RequestExecutor;
 
 import java.util.List;
+
+import androidx.appcompat.app.AlertDialog;
 
 
 /**

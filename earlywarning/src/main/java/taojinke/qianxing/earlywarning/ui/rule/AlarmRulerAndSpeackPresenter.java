@@ -1,6 +1,5 @@
 package taojinke.qianxing.earlywarning.ui.rule;
 
-import android.content.Context;
 import android.text.TextUtils;
 
 import com.alibaba.fastjson.JSON;

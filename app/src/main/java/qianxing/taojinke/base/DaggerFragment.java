@@ -3,8 +3,8 @@ package qianxing.taojinke.base;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 
+import androidx.annotation.Nullable;
 import qianxing.taojinke.TaoJinKeApplicationLike;
 import qianxing.taojinke.dagger.ComponentFactory;
 import qianxing.taojinke.dagger.fragment.FragmentComponent;
@@ -43,8 +43,9 @@ public abstract class DaggerFragment extends BaseFragment {
     public void launchActivity(Class<? extends BaseActivity> clazz, Bundle bundle) {
         Intent intent = new Intent();
         intent.setClass(getDaggerActivity(), clazz);
-        if (bundle != null)
+        if (bundle != null) {
             intent.putExtras(bundle);
+        }
         startActivity(intent);
 
     }

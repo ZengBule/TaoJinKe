@@ -63,6 +63,7 @@
         <activity android:name=".ui.TaskEcecuterActivity" />
         <activity android:name=".ui.clazz.TaskWaitCompletActivity" />
         <activity android:name=".ui.rule.AlarmRulerAndSpeackActivity" />
+        <activity android:name=".ui.alarm.AlarmActivity" />
     </application>
 
 </manifest>

@@ -30,4 +30,11 @@ public class ActivityPresenterModule {
     }
 
 
+    @Provides
+    @ActivityScope
+    taojinke.qianxing.train.ui.main.MainContract.IMainPresenter providerMainPresenter() {
+        taojinke.qianxing.train.ui.main.MainPresenter presenter = new taojinke.qianxing.train.ui.main.MainPresenter();
+        getActivityComponent().inject(presenter);
+        return presenter;
+    }
 }

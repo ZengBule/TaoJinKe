@@ -1,6 +1,8 @@
 package taojinke.qianxing.train.dagger.fragments.module;
 
 import dagger.Module;
+import dagger.Provides;
+import taojinke.qianxing.lib_base.dagger.FragmentScope;
 import taojinke.qianxing.train.base.DaggerFragment;
 
 /**
@@ -24,5 +26,29 @@ public class FragmentModule {
 
     public DaggerFragment getDaggerFragment() {
         return daggerFragment;
+    }
+
+    @Provides
+    @FragmentScope
+    taojinke.qianxing.train.ui.home.fragment.HomeContract.IHomeView providerHomeView() {
+        return (taojinke.qianxing.train.ui.home.fragment.HomeContract.IHomeView) getDaggerFragment();
+    }
+
+    @Provides
+    @FragmentScope
+    taojinke.qianxing.train.ui.train.fragment.base.BaseTrainContract.IBaseTrainView providerBaseTrainView() {
+        return (taojinke.qianxing.train.ui.train.fragment.base.BaseTrainContract.IBaseTrainView) getDaggerFragment();
+    }
+
+    @Provides
+    @FragmentScope
+    taojinke.qianxing.train.ui.train.fragment.task.TaskTrainContract.ITaskTrainView providerTaskTrainView() {
+        return (taojinke.qianxing.train.ui.train.fragment.task.TaskTrainContract.ITaskTrainView) getDaggerFragment();
+    }
+
+    @Provides
+    @FragmentScope
+    taojinke.qianxing.train.ui.train.fragment.TrainContract.ITrainView providerTrainView() {
+        return (taojinke.qianxing.train.ui.train.fragment.TrainContract.ITrainView) getDaggerFragment();
     }
 }

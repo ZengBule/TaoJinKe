@@ -2,8 +2,8 @@ package qianxing.taojinke.dagger.activity.module;
 
 import android.app.Activity;
 import android.content.Context;
-import android.support.v4.app.FragmentManager;
 
+import androidx.fragment.app.FragmentManager;
 import dagger.Module;
 import dagger.Provides;
 import qianxing.taojinke.base.DaggerActivity;

@@ -2,8 +2,8 @@ package taojinke.qianxing.mine.base;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 
+import androidx.annotation.Nullable;
 import taojinke.qianxing.lib_base.app.LifecycleApplication;
 import taojinke.qianxing.lib_base.base.BaseActivity;
 import taojinke.qianxing.lib_base.base.BaseFragment;
@@ -53,8 +53,9 @@ public abstract class DaggerFragment extends BaseFragment {
     public void launchActivity(Class<? extends BaseActivity> clazz, Bundle bundle) {
         Intent intent = new Intent();
         intent.setClass(getDaggerActivity(), clazz);
-        if (bundle != null)
+        if (bundle != null) {
             intent.putExtras(bundle);
+        }
         startActivity(intent);
 
     }

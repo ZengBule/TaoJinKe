@@ -3,8 +3,8 @@ package qianxing.taojinke.base;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 
+import androidx.annotation.Nullable;
 import qianxing.taojinke.TaoJinKeApplicationLike;
 import qianxing.taojinke.dagger.ComponentFactory;
 import qianxing.taojinke.dagger.activity.ActivityComponent;

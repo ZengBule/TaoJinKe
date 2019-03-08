@@ -1,13 +1,13 @@
 package taojinke.qianxing.mine.weiget.behavior;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.v7.widget.Toolbar;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.widget.Toolbar;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import taojinke.qianxing.lib_kernel.http.net.rx.databus.RxBus;
 import taojinke.qianxing.mine.R;
 

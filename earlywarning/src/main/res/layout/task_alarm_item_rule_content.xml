@@ -29,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="@dimen/x_ui_px_27.0"
-                android:drawableLeft="@mipmap/alarm_rule_and_speak"
+                android:drawableLeft="@mipmap/task_icon_rule_and_speak"
                 android:drawablePadding="@dimen/x_ui_px_17.0"
                 android:text="0-5分钟"
                 android:textColor="#666666" />

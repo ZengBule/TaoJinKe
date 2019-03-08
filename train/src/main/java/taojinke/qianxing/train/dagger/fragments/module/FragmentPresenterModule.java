@@ -1,6 +1,7 @@
 package taojinke.qianxing.train.dagger.fragments.module;
 
 import dagger.Module;
+import dagger.Provides;
 import taojinke.qianxing.lib_base.dagger.FragmentScope;
 import taojinke.qianxing.train.base.DaggerFragment;
 import taojinke.qianxing.train.dagger.fragments.FragmentComponent;
@@ -32,5 +33,37 @@ public class FragmentPresenterModule {
 
     private DaggerFragment getDaggerFragment() {
         return daggerFragment;
+    }
+
+    @Provides
+    @FragmentScope
+    taojinke.qianxing.train.ui.home.fragment.HomeContract.IHomePresenter providerHomePresenter() {
+        taojinke.qianxing.train.ui.home.fragment.HomePresenter presenter = new taojinke.qianxing.train.ui.home.fragment.HomePresenter();
+        getFragmentComponent().inject(presenter);
+        return presenter;
+    }
+
+    @Provides
+    @FragmentScope
+    taojinke.qianxing.train.ui.train.fragment.base.BaseTrainContract.IBaseTrainPresenter providerBaseTrainPresenter() {
+        taojinke.qianxing.train.ui.train.fragment.base.BaseTrainPresenter presenter = new taojinke.qianxing.train.ui.train.fragment.base.BaseTrainPresenter();
+        getFragmentComponent().inject(presenter);
+        return presenter;
+    }
+
+    @Provides
+    @FragmentScope
+    taojinke.qianxing.train.ui.train.fragment.task.TaskTrainContract.ITaskTrainPresenter providerTaskTrainPresenter() {
+        taojinke.qianxing.train.ui.train.fragment.task.TaskTrainPresenter presenter = new taojinke.qianxing.train.ui.train.fragment.task.TaskTrainPresenter();
+        getFragmentComponent().inject(presenter);
+        return presenter;
+    }
+
+    @Provides
+    @FragmentScope
+    taojinke.qianxing.train.ui.train.fragment.TrainContract.ITrainPresenter providerTrainPresenter() {
+        taojinke.qianxing.train.ui.train.fragment.TrainPresenter presenter = new taojinke.qianxing.train.ui.train.fragment.TrainPresenter();
+        getFragmentComponent().inject(presenter);
+        return presenter;
     }
 }

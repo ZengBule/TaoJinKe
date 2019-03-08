@@ -17,4 +17,9 @@ import javax.inject.Inject;
 public class MinePresenter implements MineContract.IMinePresenter {
     @Inject
     MineContract.IMineView mView;
+
+    @Override
+    public void approveRealName() {
+
+    }
 }

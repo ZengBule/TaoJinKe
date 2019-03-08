@@ -35,6 +35,6 @@ public class MainActivity extends DaggerActivity implements MainContract.IMainVi
 
     @Override
     protected int getLayoutResources() {
-        return R.layout.activity_main;
+        return R.layout.mine_activity_main;
     }
 }

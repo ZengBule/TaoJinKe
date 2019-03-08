@@ -17,9 +17,10 @@ import taojinke.qianxing.lib_base.base.BaseView;
 public interface MineContract {
     interface IMineView extends BaseView {
 
+
     }
 
     interface IMinePresenter {
-
+        void approveRealName();
     }
 }

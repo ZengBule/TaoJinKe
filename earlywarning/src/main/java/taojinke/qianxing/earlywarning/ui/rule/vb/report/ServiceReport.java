@@ -2,7 +2,7 @@ package taojinke.qianxing.earlywarning.ui.rule.vb.report;
 
 import java.util.List;
 
-import qianxing.taojinke.ui.taskstatus.alarmRuler.vb.report.cvb.ServiceReportContent;
+import taojinke.qianxing.earlywarning.ui.rule.vb.report.cvb.ServiceReportContent;
 
 /**
  * ***********************************************

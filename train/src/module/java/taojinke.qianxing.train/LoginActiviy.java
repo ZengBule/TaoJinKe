@@ -2,7 +2,6 @@ package taojinke.qianxing.train;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -10,6 +9,7 @@ import com.alibaba.fastjson.JSON;
 
 import java.util.HashMap;
 
+import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -21,6 +21,7 @@ import taojinke.qianxing.lib_kernel.http.BaseBean;
 import taojinke.qianxing.lib_kernel.http.net.rx.RxRestClient;
 import taojinke.qianxing.lib_kernel.model.LoginUserBean;
 import taojinke.qianxing.lib_kernel.sharedpreference.SharedPreferenceUtils;
+import taojinke.qianxing.train.ui.main.MainActivity;
 
 public class LoginActiviy extends AppCompatActivity {
 
