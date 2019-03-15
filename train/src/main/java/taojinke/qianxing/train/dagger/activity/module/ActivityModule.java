@@ -33,12 +33,6 @@ public class ActivityModule {
         return daggerActivity;
     }
 
-    @Provides
-    @ActivityScope
-    taojinke.qianxing.train.ui.main.MainContract.IMainView providerMainView() {
-        return (taojinke.qianxing.train.ui.main.MainContract.IMainView) getDaggerActivity();
-    }
-
 
     public interface Exposes {
 

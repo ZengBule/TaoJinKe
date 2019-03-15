@@ -9,9 +9,6 @@ import com.alibaba.fastjson.JSON;
 
 import java.util.HashMap;
 
-import androidx.appcompat.app.AppCompatActivity;
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -21,22 +18,30 @@ import taojinke.qianxing.lib_kernel.http.BaseBean;
 import taojinke.qianxing.lib_kernel.http.net.rx.RxRestClient;
 import taojinke.qianxing.lib_kernel.model.LoginUserBean;
 import taojinke.qianxing.lib_kernel.sharedpreference.SharedPreferenceUtils;
-import taojinke.qianxing.train.ui.main.MainActivity;
+import taojinke.qianxing.train.base.DaggerActivity;
+import taojinke.qianxing.train.dagger.activity.ActivityComponent;
 
-public class LoginActiviy extends AppCompatActivity {
+public class LoginActiviy extends DaggerActivity {
 
-    @BindView(R.id.user)
     EditText user;
-    @BindView(R.id.passWord)
     EditText passWord;
-    @BindView(R.id.login)
     Button login;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.trian_activity_login);
-        ButterKnife.bind(this);
+    protected void trySetupData(Bundle savedInstanceState) {
+        user = findViewById(R.id.user);
+        passWord = findViewById(R.id.passWord);
+        login = findViewById(R.id.login);
+    }
+
+    @Override
+    protected int getLayoutResources() {
+        return R.layout.trian_activity_login;
+    }
+
+    @Override
+    protected void inject(ActivityComponent activityComponent) {
+
     }
 
     @OnClick(R.id.login)

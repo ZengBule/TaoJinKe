@@ -1,4 +1,3 @@
-
 def cfg = rootProject.ext.android
 def ddf = rootProject.ext.defDependencied
 if (!isModule) {
@@ -51,23 +50,29 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation ddf.appcompat
+    implementation ddf.cardview
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
     implementation project(path: ':lib-base')
     implementation project(path: ':lib-kernel')
     implementation project(path: ':lib-weight')
+    implementation project(path: ':lib-core')
     implementation ddf.dagger
     annotationProcessor ddf.daggerCompiler
     api ddf.arouterApi
-    implementation 'com.android.support:support-v4:28.0.0'
     implementation ddf.butterknife
     annotationProcessor ddf.butterknifeCompiler
     implementation ddf.rxJava
     implementation ddf.rxAndroid
+    implementation ddf.multiAdapter
+    implementation ddf.glide
+
     if (!isModule) {
         implementation ddf.fastjson
     }
+    implementation ddf.tablayout
 }

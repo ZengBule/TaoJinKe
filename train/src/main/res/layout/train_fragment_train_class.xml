@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/subjectHead"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x_ui_px_108.0">
+
+        <TextView
+            android:id="@+id/itemName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x_ui_px_30.0"
+            android:drawableRight="@mipmap/train_icon_ssp_down"
+            android:drawablePadding="3dp"
+            android:gravity="right|center_vertical"
+            android:text="语音客服基础培训"
+            android:textColor="@color/FF2A2A2A" />
+
+        <LinearLayout
+            android:id="@+id/teacherLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/myTeacher"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/x_ui_px_15.0"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical"
+                android:text="我的老师" />
+
+            <ImageView
+                android:layout_width="@dimen/x_ui_px_60.0"
+                android:layout_height="@dimen/x_ui_px_60.0"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/x_ui_px_30.0"
+                android:src="@mipmap/icon_photo_personal" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/x_ui_px_30.0"
+        android:layout_marginRight="@dimen/x_ui_px_30.0"
+        android:layout_marginBottom="@dimen/x_ui_px_30.0">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/white_buttom_radius" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

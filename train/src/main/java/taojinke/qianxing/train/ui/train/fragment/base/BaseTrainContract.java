@@ -1,6 +1,7 @@
 package taojinke.qianxing.train.ui.train.fragment.base;
 
 import taojinke.qianxing.lib_base.base.BaseView;
+import taojinke.qianxing.train.ui.train.fragment.base.bean.MajorsIndexBean;
 
 
 /**
@@ -16,10 +17,10 @@ import taojinke.qianxing.lib_base.base.BaseView;
  */
 public interface BaseTrainContract {
     interface IBaseTrainView extends BaseView {
-
+        void doFragmentEvent(MajorsIndexBean majorsIndexBean);
     }
 
     interface IBaseTrainPresenter {
-
+        void getMajorIndex();
     }
 }

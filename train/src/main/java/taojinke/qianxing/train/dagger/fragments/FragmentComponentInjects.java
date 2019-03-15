@@ -16,4 +16,17 @@ public interface FragmentComponentInjects {
     void inject(taojinke.qianxing.train.ui.train.fragment.TrainPresenter presenter);
 
     void inject(taojinke.qianxing.train.ui.train.fragment.TrainFragment fragment);
+
+
+    void inject(taojinke.qianxing.train.ui.train.fragment.base.first.FirstIntoTrainPresenter presenter);
+
+    void inject(taojinke.qianxing.train.ui.train.fragment.base.first.FirstIntoTrainFragment fragment);
+
+    void inject(taojinke.qianxing.train.ui.train.fragment.base.clazz.TrainClassPresenter presenter);
+
+    void inject(taojinke.qianxing.train.ui.train.fragment.base.clazz.TrainClassFragment fragment);
+
+    void inject(taojinke.qianxing.train.ui.train.fragment.base.mojor.ChoseMojorPresenter presenter);
+
+    void inject(taojinke.qianxing.train.ui.train.fragment.base.mojor.ChoseMojorFragment fragment);
 }

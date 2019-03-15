@@ -49,7 +49,7 @@ dependencies {
     annotationProcessor ddf.arouterCompiler
     implementation project(path: ':lib-weight')
     implementation ddf.rxLifecyle2
-    compileOnly ddf.butterknife
+    implementation ddf.butterknife
     annotationProcessor ddf.butterknifeCompiler
 
 

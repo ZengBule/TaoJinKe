@@ -51,4 +51,18 @@ public class FragmentModule {
     taojinke.qianxing.train.ui.train.fragment.TrainContract.ITrainView providerTrainView() {
         return (taojinke.qianxing.train.ui.train.fragment.TrainContract.ITrainView) getDaggerFragment();
     }
+
+
+
+    @Provides
+    @FragmentScope
+    taojinke.qianxing.train.ui.train.fragment.base.clazz.TrainClassContract.ITrainClassView providerTrainClassView() {
+        return (taojinke.qianxing.train.ui.train.fragment.base.clazz.TrainClassContract.ITrainClassView) getDaggerFragment();
+    }
+
+    @Provides
+    @FragmentScope
+    taojinke.qianxing.train.ui.train.fragment.base.mojor.ChoseMojorContract.IChoseMojorView providerChoseMojorView() {
+        return (taojinke.qianxing.train.ui.train.fragment.base.mojor.ChoseMojorContract.IChoseMojorView) getDaggerFragment();
+    }
 }

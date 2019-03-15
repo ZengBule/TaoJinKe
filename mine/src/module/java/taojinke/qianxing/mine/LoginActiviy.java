@@ -10,8 +10,6 @@ import com.alibaba.fastjson.JSON;
 import java.util.HashMap;
 
 import androidx.appcompat.app.AppCompatActivity;
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -25,18 +23,17 @@ import taojinke.qianxing.mine.ui.main.MainActivity;
 
 public class LoginActiviy extends AppCompatActivity {
 
-    @BindView(R.id.user)
     EditText user;
-    @BindView(R.id.passWord)
     EditText passWord;
-    @BindView(R.id.login)
     Button login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mine_activity_login);
-        ButterKnife.bind(this);
+        user = findViewById(R.id.user);
+        passWord = findViewById(R.id.passWord);
+        login = findViewById(R.id.login);
     }
 
     @OnClick(R.id.login)

@@ -8,7 +8,7 @@ ext {
             minSdkVersion    : 16,
             targetSdkVersion : 28,
     ]
-    supportLibrary = "28.0.0"
+    supportLibrary = "28.0.0-beta1"
     defDependencied = [
             "appcompat"          : "com.android.support:appcompat-v7:${supportLibrary}",
             'design'             : "com.android.support:design:${supportLibrary}",
@@ -45,7 +45,8 @@ ext {
             'jodaTime'           : "joda-time:joda-time:2.9.4",
             'andPermission'      : "com.yanzhenjie:permission:2.0.0-rc4",
             'log'                : "com.orhanobut:logger:2.2.0",
-            'multiAdapter'        : "me.drakeet.multitype:multitype:3.5.0"
+            'multiAdapter'       : "me.drakeet.multitype:multitype:3.5.0",
+            'tablayout'          : "com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar"
 
 
     ]

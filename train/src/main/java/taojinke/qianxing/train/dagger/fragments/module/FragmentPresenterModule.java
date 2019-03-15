@@ -66,4 +66,22 @@ public class FragmentPresenterModule {
         getFragmentComponent().inject(presenter);
         return presenter;
     }
+
+
+
+    @Provides
+    @FragmentScope
+    taojinke.qianxing.train.ui.train.fragment.base.clazz.TrainClassContract.ITrainClassPresenter providerTrainClassPresenter() {
+        taojinke.qianxing.train.ui.train.fragment.base.clazz.TrainClassPresenter presenter = new taojinke.qianxing.train.ui.train.fragment.base.clazz.TrainClassPresenter();
+        getFragmentComponent().inject(presenter);
+        return presenter;
+    }
+
+    @Provides
+    @FragmentScope
+    taojinke.qianxing.train.ui.train.fragment.base.mojor.ChoseMojorContract.IChoseMojorPresenter providerChoseMojorPresenter() {
+        taojinke.qianxing.train.ui.train.fragment.base.mojor.ChoseMojorPresenter presenter = new taojinke.qianxing.train.ui.train.fragment.base.mojor.ChoseMojorPresenter();
+        getFragmentComponent().inject(presenter);
+        return presenter;
+    }
 }
