@@ -47,7 +47,7 @@ public class TrainClassFragment extends DaggerFragment implements TrainClassCont
     TrainClassContract.ITrainClassPresenter mPresenter;
     @BindView(R.id.itemName)
     TextView itemName;
-    @BindView(R.id.MyTeacher)
+    @BindView(R.id.myTeacher)
     TextView myTeacher;
     @BindView(R.id.teacherLayout)
     LinearLayout teacherLayout;
@@ -138,7 +138,6 @@ public class TrainClassFragment extends DaggerFragment implements TrainClassCont
         Log.d("TrainFragment", "life - >onDestroy = ");
         getmContext().unregisterReceiver(lockReceiver);
         super.onDestroy();
-
     }
 
     @Override

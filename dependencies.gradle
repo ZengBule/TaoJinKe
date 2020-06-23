@@ -1,6 +1,7 @@
 ext {
     isModule = false
 
+
     android = [
             sdkVersion       : 28,
             buildToolsVersion: '28.0.3',
@@ -46,7 +47,8 @@ ext {
             'andPermission'      : "com.yanzhenjie:permission:2.0.0-rc4",
             'log'                : "com.orhanobut:logger:2.2.0",
             'multiAdapter'       : "me.drakeet.multitype:multitype:3.5.0",
-            'tablayout'          : "com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar"
+            'tablayout'          : "com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar",
+            'smartRefresh'       : "com.scwang.smartrefresh:SmartRefreshLayout:1.0.4-4"
 
 
     ]

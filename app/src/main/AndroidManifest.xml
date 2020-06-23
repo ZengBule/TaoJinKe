@@ -4,31 +4,32 @@
     package="qianxing.taojinke">
 
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    <!-- //-&#45;&#45;&#45;&#45;&#45;&#45;容联云权限-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;
+    <!--
+     //-&#45;&#45;&#45;&#45;&#45;&#45;容联云权限-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;
      // SDK 权限申明, 第三方 APP 接入时，请将 com.yuntongxun.ecdemo 替换为自己的包名
      // 和下面的 uses-permission 一起加入到你的 AndroidManifest 文件中。
-     -->
+    -->
     <permission
         android:name="qianxing.taojinke.permission.RECEIVE_MSG"
         android:protectionLevel="signature" />
     <permission
         android:name="qianxing.taojinke.permission.INCOMING_CALL"
         android:protectionLevel="signature" />
-    <!--  // 接收 SDK 消息广播权限， 第三方 APP 接入时，请将 com.yuntongxun.ecdemo 替换为自己的包名-->
+    <!-- // 接收 SDK 消息广播权限， 第三方 APP 接入时，请将 com.yuntongxun.ecdemo 替换为自己的包名 -->
     <uses-permission android:name="qianxing.taojinke.permission.RECEIVE_MSG" />
     <uses-permission android:name="qianxing.taojinke.permission.INCOMING_CALL" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <!--  // 允许程序访问有关的网络信息-->
+    <!-- // 允许程序访问有关的网络信息 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <!--  // 允许程序访问Wi-Fi网络状态信息-->
+    <!-- // 允许程序访问Wi-Fi网络状态信息 -->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <!-- 允许应用程序改变网络状态 -->
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <!-- 允许应用程序改变WIFI连接状态 -->
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <!--   // 允许应用读写用户的外部存储器-->
+    <!-- // 允许应用读写用户的外部存储器 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -58,6 +59,7 @@
     <uses-permission android:name="android.permission.FLASHLIGHT" />
 
     <uses-feature android:name="android.hardware.camera.autofocus" />
+
     <application
         android:name=".app.TaoJinkeApplication"
         android:allowBackup="true"
@@ -66,16 +68,15 @@
         android:roundIcon="@mipmap/app_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity
             android:name=".ui.launcher.LauncherActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Activity_splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -109,7 +110,7 @@
         <activity
             android:name=".ui.main.MainActivity"
             android:screenOrientation="portrait" />
-
+        <activity android:name=".ui.web.WebActivity"/>
     </application>
 
 </manifest>

@@ -92,4 +92,15 @@
     <declare-styleable name="CountdownView">
         <attr name="modules" format="integer" />
     </declare-styleable>
+
+    <declare-styleable name="ProGrossCircleView">
+        <attr name="outer_circle_color" format="color" />
+        <attr name="inner_circle_color" format="color" />
+        <attr name="big_text_size" format="float" />
+        <attr name="big_text_color" format="color" />
+        <attr name="small_text_size" format="float" />
+        <attr name="small_text_color" format="color" />
+        <attr name="desc" format="string" />
+        <attr name="unit" format="string" />
+    </declare-styleable>
 </resources>

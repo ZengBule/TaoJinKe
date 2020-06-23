@@ -70,6 +70,7 @@ dependencies {
     implementation ddf.rxAndroid
     implementation ddf.multiAdapter
     implementation ddf.glide
+    implementation ddf.smartRefresh
 
     if (!isModule) {
         implementation ddf.fastjson

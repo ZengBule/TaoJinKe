@@ -10,7 +10,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import me.drakeet.multitype.ItemViewBinder;
 import taojinke.qianxing.earlywarning.R;
 import taojinke.qianxing.earlywarning.ui.alarm.AlarmActivity;

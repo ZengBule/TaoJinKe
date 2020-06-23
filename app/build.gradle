@@ -48,6 +48,8 @@ dependencies {
     //noinspection GradleCompatible
     implementation 'com.android.support:design:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'androidx.appcompat:appcompat:1.0.0-alpha1'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
     compileOnly ddf.appcompat
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
@@ -101,9 +103,9 @@ task setReleaseVersionCode() {
         android.defaultConfig.versionCode = Integer.valueOf(dt + "101")
     }
 }
-task generateReleaseLibraryAssets(){
+task generateReleaseLibraryAssets() {
 
-    doFirst{
+    doFirst {
         generateLibraryJson('release')
     }
 }
@@ -118,17 +120,16 @@ task generateDebugModuleJson() {
     }
 }
 
-class Book{
+class Book {
     String name;
     String path;
 }
 
-def generateLibraryJson(String buildType){
+def generateLibraryJson(String buildType) {
 
-    def applicationPath=["/train/application/like","/chat/application/like","/mine/application/like"]
+    def applicationPath = ["/train/application/like", "/chat/application/like", "/mine/application/like"]
 //    file("src/$buildType/assets/library.json")
 //            .withWriter('UTF-8') { within ->
 //        within.write(object.toString())
 //    }
 }
-

@@ -1,5 +1,6 @@
 package taojinke.qianxing.train.ui.train.fragment.base.mojor;
 
+import me.drakeet.multitype.MultiTypeAdapter;
 import taojinke.qianxing.lib_base.base.BaseView;
 
 
@@ -16,10 +17,20 @@ import taojinke.qianxing.lib_base.base.BaseView;
  */
 public interface ChoseMojorContract {
     interface IChoseMojorView extends BaseView {
+        void showNormal();
 
+        void showNoNetwork();
+
+        void showError();
+
+        void showEmpty();
+
+        void stopRefresh();
     }
 
     interface IChoseMojorPresenter {
+        void getMajorData();
 
+        MultiTypeAdapter getAdapter();
     }
 }

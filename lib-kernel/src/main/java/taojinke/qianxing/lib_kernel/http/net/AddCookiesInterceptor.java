@@ -3,7 +3,6 @@ package taojinke.qianxing.lib_kernel.http.net;
 import android.util.Log;
 
 import com.alibaba.fastjson.JSON;
-import com.orhanobut.logger.Logger;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
@@ -36,8 +35,8 @@ public class AddCookiesInterceptor implements Interceptor {
     public Response intercept(Chain chain) throws IOException {
         Request original = chain.request();
         String method = original.method();
-        Log.d("TAG", "request method :" + method);
-        Log.d("TAG", "request url :" + original.url());
+        LogToFile.d("TAG", "request method :" + method);
+        LogToFile.d("TAG", "request url :" + original.url());
         Response response = chain.proceed(chain.request());
         ResponseBody responseBody = response.body();
 

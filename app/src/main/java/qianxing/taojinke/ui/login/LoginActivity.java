@@ -25,6 +25,7 @@ import qianxing.taojinke.dagger.activity.ActivityComponent;
 import qianxing.taojinke.ui.main.MainActivity;
 import qianxing.taojinke.ui.test.TestSettingActivity;
 import qianxing.taojinke.ui.user.register.RegisterUserActivity;
+import qianxing.taojinke.ui.web.WebActivity;
 import taojinke.qianxing.core.statusbar.StatusBarUtils;
 import taojinke.qianxing.lib_kernel.model.LoginUserBean;
 import taojinke.qianxing.lib_kernel.sharedpreference.SharedPreferenceUtils;
@@ -142,6 +143,7 @@ public class LoginActivity extends DaggerActivity implements LoginContract.ILogi
                 forgetPassword();
                 break;
             case R.id.tv_login:
+                lanuchActivity(WebActivity.class);
                 loginTjk();
                 break;
             case R.id.ll_login_register:
